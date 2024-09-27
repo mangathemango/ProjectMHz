@@ -1,10 +1,10 @@
-let r = new rive.Rive({
-    src: "MHz.riv", // URL to the .riv file
+const r = new rive.Rive({
+    src: "Rive assets/MHz.riv", // URL to the .riv file
     canvas: document.getElementById("canvas"),
     autoplay: true,
-    stateMachines: "State Machine 1" // Replace with your desired state machine name
+    stateMachines: "State Machine 1",
+    fit: rive.Fit.cover,
   });
-
-document.getElementById("canvas").addEventListener("click", () => {
+setTimeout(() => {
     r.stateMachineInputs('State Machine 1').find(i => i.name === 'Loading Complete').fire()
-})
+}, 500);
