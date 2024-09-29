@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas" width="500" height="400"></canvas>
+    <div id="loading-container">
+      <canvas id="loading-animation" width="500" height="400"></canvas>
+    </div>
+
+    <canvas id="home-background"></canvas>
+
+    <div id="home-container">
+      <div id="home-button-container">
+        <button id="hardware-button" onclick="javascript: selectSubject('Hardware')">Hardware</button>
+        <button id="behavioral-ai-button" onclick="javascript: selectSubject('Behavioral AI')">Behavioral AI</button>
+        <button id="network-button" onclick="javascript: selectSubject('Network')">Network</button>
+      </div>
+      <div id="subject-selection-container">
+        <div id="subject-selection-box">
+          <button id="subject-selection-back" onclick="javascript:goBack()">Back</button>
+          <label id="subject-selection-title"></label>
+          <p id="subject-selection-description"></p>
+        </div>
+      </div>
+      <div id="content-view-container">
+        <div id="content-view-box">
+          <p id="temp-text">Our teaching contents will go down here</p>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
