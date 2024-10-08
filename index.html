@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rive test</title>
+    <title>ProjectMHZ</title>
     <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="icon" href="Assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="loading-container">
@@ -14,25 +18,69 @@
 
     <canvas id="home-background"></canvas>
 
-    <div id="home-container">
-      <div id="home-button-container">
-        <button id="hardware-button" onclick="javascript: selectSubject('Hardware')">Hardware</button>
-        <button id="behavioral-ai-button" onclick="javascript: selectSubject('Behavioral AI')">Behavioral AI</button>
-        <button id="network-button" onclick="javascript: selectSubject('Network')">Network</button>
-      </div>
-      <div id="subject-selection-container">
-        <div id="subject-selection-box">
-          <button id="subject-selection-back" onclick="javascript:goBack()">Back</button>
-          <label id="subject-selection-title"></label>
-          <p id="subject-selection-description"></p>
+      <div id="bookmark-container">
+        <div id="bookmark-logo"></div>
+        <div id="bookmark-navigations">
+          <button onclick="renderScreen('Quick Start')" id="bookmark-quick-start" class="bookmark-button">Quick Start</button>
+          <button onclick="renderScreen('About Us')" id="bookmark-about-us" class="bookmark-button">About Us</button>
+          <button onclick="renderScreen('Lessons')" id="bookmark-lessons" class="bookmark-button">Lessons</button>
+          <button onclick="renderScreen('Glossary')" id="bookmark-glossary" class="bookmark-button">Glossary</button>
+          <button onclick="renderScreen('My Statistics')" id="bookmark-my-stats" class="bookmark-button">My Statistics</button>
         </div>
       </div>
-      <div id="content-view-container">
-        <div id="content-view-box">
-          <p id="temp-text">Our teaching contents will go down here</p>
+
+    <div id="main-screen">
+        
+      <div id="home" class="screen">
+          <div id="subject-selection-container">
+            <div id="subject-selection-box">
+              <label id="subject-selection-title">QUICK START</label>
+              <p id="subject-selection-description"></p>
+            </div>
+          </div>
+          <div id="home-button-container">
+            <button id="hardware-button" onclick="javascript: selectSubject('Hardware')">Hardware</button>
+            <button id="behavioral-ai-button" onclick="javascript: selectSubject('Behavioral AI')">Behavioral AI</button>
+            <button id="network-button" onclick="javascript: selectSubject('Network')">Network</button>
+        </div>
+
+      </div>
+      <div id="about-us" class="screen">
+        <div id="about-us-file-container">
+          <div id="about-us-29-9" class="about-us-date-container">
+            <label class="about-us-file-date-title">29/09/2024</label>
+            <div class="about-us-file-button-container">
+              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Project Log.pdf')">
+                <p class="about-us-file-label">Project Log</p>
+              </div>
+              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Master To do list.pdf')">
+                <p class="about-us-file-label">Master To do list</p>
+              </div>
+              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Rough Plan.pdf')">
+                <p class="about-us-file-label">Rough Plan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="about-us-description-container">
+          <img src="Assets/logo.svg" alt="logo" id="about-us-description-img">
+          <p id="about-us-description-text">
+          We, Team MHz, are the ones that decided that Moodle is too boring. <br><br>
+          So yeah, here we are. We made our own website with our own graphics. Yay. <br><br>
+          This part of the page is to post stuffs like rough plans, logs, to do lists, you name it.
+          </p>
+        </div>
+        <div id="about-us-file-viewer">
+          <button id="about-us-close-file-button" onclick="closefile()">X</button>
+          <iframe id="about-us-file" src="" frameborder="0"></iframe>
         </div>
       </div>
+
     </div>
-    <script src="script.js"></script>
+
+
+
+    <script src="Scripts/loadRiveAssets.js"></script>
+    <script src="Scripts/script.js"></script>
 </body>
 </html>

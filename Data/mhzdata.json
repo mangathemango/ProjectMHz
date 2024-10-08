@@ -1,0 +1,35 @@
+{
+    "Hardware": {
+        "description": "Click again to enter Hardware Lesson 1",
+        "content": [
+            {
+                "type": "Glossary",
+                "name": "Hardware Glossary",
+                "entries": [
+                    {
+                        "title": "Accelerated Graphics Port (AGP)",
+                        "description": "this thing is crazy"
+                    }
+                ]
+            }
+        ]
+    },
+    "Behavioral AI": {
+        "description": "Click again to enter Behavioral AI Lesson 1",
+        "content": [
+            {
+                "type": "Glossary",
+                "name": "Test Behavioral AI Glossary"
+            }
+        ]
+    },
+    "Network": {
+        "description": "Click again to enter Network Lesson 1",
+        "content": [
+            {
+                "type": "Glossary",
+                "name": "Network AI Glossary"
+            }
+        ]
+    }
+}
