@@ -55,6 +55,7 @@ const showfile = (source) => {
     const fileViewer = document.getElementById("about-us-file-viewer") 
     const fileElement = document.getElementById("about-us-file")
     fileViewer.style.transform = "translateY(0%)"
+    fileElement.setAttribute("src", "")
     fileElement.setAttribute("src",source)
 }
 
