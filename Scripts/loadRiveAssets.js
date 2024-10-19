@@ -1,20 +1,19 @@
+let loadingScreenLoaded = false
 const loadingScreen = new rive.Rive({
-    src: "./Assets/Rive/MHz.riv", // URL to the .riv file
+    src: "./Assets/Rive/MHz.riv", 
     canvas: document.getElementById("loading-animation"),
     autoplay: true,
-    stateMachines: "State Machine 1",
+    stateMachines: "Loading State",
     fit: rive.Fit.cover,
-    onLoad: () => {
-        setTimeout(() => {
-            handleLoadingComplete();
-        }, 500);
+    onload: () => {
+        handleLoadingComplete()
     }
 });
 let layout = new rive.Layout({
-    fit: rive.Fit.Fill, // Choose your desired fit option
+    fit: rive.Fit.Fill
 });
 const backgroundScreen = new rive.Rive({
-    src: "./Assets/Rive/sineBG.riv", // URL to the .riv file
+    src: "./Assets/Rive/sineBG.riv", 
     canvas: document.getElementById("home-background"),
     autoplay: true,
     stateMachines: "State Machine 1",
@@ -22,12 +21,15 @@ const backgroundScreen = new rive.Rive({
 });
 
 const handleLoadingComplete = () => {
-    loadingScreen.stateMachineInputs('State Machine 1').find(i => i.name === 'Loading Complete').fire();
     setTimeout(() => {
-        document.getElementById("loading-container").style.opacity = "0";
+        loadingScreen.stateMachineInputs('Loading State').find(i => i.name === 'Loading Complete').fire();
         setTimeout(() => {
-            document.getElementById("loading-container").remove();
-        }, 500);
-    }, 2500);
+            document.getElementById("loading-container").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("loading-container").remove();
+            }, 500);
+        }, 2500);       
+    }, 100);
 };
+
 
