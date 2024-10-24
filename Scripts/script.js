@@ -1,10 +1,23 @@
 let Data;
-fetch("Data/data.json").then(response => response.json()).then((data) => {
-    Data = data;
-});
+fetch("Data/data.json").then(response => response.json()).then((data) => {Data = data;});
+let keyWordsData
+fetch("Data/keyWords.json").then(response => response.json()).then((data) => {
+    keyWordsData = data["Key words"].sort((a,b) => a["Terms"] < b["Terms"] ? -1 : 1)
+    updateGlossary()
+})
 
+const updateGlossary = () => {
+    keyWordsData.forEach(word => {
+        document.getElementById("glossary-container").insertAdjacentHTML("beforeend",`
+            <div class="glossary-word-container">
+            <p class="glossary-word">${word['Terms']}</p>
+            <p class="glossary-definition">${word['Definitions']}</p>
+          </div>
+            `)
+    })
+}
 const renderScreen = (screenName) => {
-    if (screenName == "My Statistics" || screenName == "Glossary") {
+    if (screenName == "My Statistics") {
         alert("This function is not available yet")
         return
     }
@@ -51,6 +64,7 @@ const showPart = (chosenButtonID) => {
     document.querySelector(".part-selector-title-container").classList.add("shrunk-part")
     
     setTimeout(() => {
+        document.getElementById("part-selector-buttons-container").style.transform = "skewY(-2deg)"
         document.getElementById("part-selector-container").id = "lesson-selector-container"
         document.querySelector(".part-viewer-container").classList.remove("hidden-part-container")
         document.getElementById("part-close-button-hidden").id = "part-close-button"
@@ -59,7 +73,6 @@ const showPart = (chosenButtonID) => {
 
 const closePart = () => {
     const chosenButton = document.getElementById(selectedPart)
-
 
     let removedPartsList = ["part-A","part-B","part-C","part-D"].filter(id => id != selectedPart)
 
@@ -74,6 +87,7 @@ const closePart = () => {
     chosenButton.classList.remove("no-hover")
     document.querySelector(".part-selector-title-container").classList.remove("shrunk-part")
     document.getElementById("part-selector-buttons-container").style.justifyContent = "space-evenly"
+    document.getElementById("part-selector-buttons-container").style.transform = "skew(0deg)"
     chosenButton.style.scale = "1"
 }
 

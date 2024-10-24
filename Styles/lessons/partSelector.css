@@ -35,6 +35,7 @@
     align-items: center;
     flex-wrap: wrap;
     overflow-y: scroll;
+    transform: all ease 1s;
 }
 
 .part-selector-title-container {

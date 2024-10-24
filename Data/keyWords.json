@@ -1,0 +1,1412 @@
+{
+    "Key words":[
+     {
+      "Terms": "Accelerated Graphics Port (AGP)",
+      "Part": "Hardware",
+      "Definitions": "a high-speed point-to-point channel for attaching a video card to a computer’s motherboard, primarily to assist in the acceleration of 3D computer graphics."
+     },
+     {
+      "Terms": "ADAS (Advanced Driver Assistance Systems)",
+      "Part": "Hardware",
+      "Definitions": "Digital technologies that help drivers in routine navigation and parking without fully automating the entire process but instead leveraging computer networks to enable more data-driven and safer driving experiences."
+     },
+     {
+      "Terms": "Accelerator",
+      "Part": "Hardware",
+      "Definitions": "a microprocessor, ASIC or expansion card designed to offload a specific task from the CPU, often containing fixed function hardware; a common example is a Graphics processing unit."
+     },
+     {
+      "Terms": "Accumulator",
+      "Part": "Hardware",
+      "Definitions": "a register in a CPU in which intermediate arithmetic and logic results are stored."
+     },
+     {
+      "Terms": "Arithmetic logic unit (ALU)",
+      "Part": "Hardware",
+      "Definitions": "A combinational digital circuit that performs arithmetic and bitwise operations on binary numbers."
+     },
+     {
+      "Terms": "APU (Accelerated Processing Unit)",
+      "Part": "Hardware",
+      "Definitions": "Short for accelerated processing unit or advanced processing unit, APU is any processing that happens outside of the computer's CPU."
+     },
+     {
+      "Terms": "ARM (Advanced RISC Machine) \n",
+      "Part": "Hardware",
+      "Definitions": "A family of reduced instruction set computing (RISC) architectures for computer processors, which prioritize simplicity and efficiency."
+     },
+     {
+      "Terms": "Binary digit (BIT)",
+      "Part": "Hardware",
+      "Definitions": "the smallest unit of data that a computer can process."
+     },
+     {
+      "Terms": "Bus",
+      "Part": "Hardware",
+      "Definitions": "a subsystem that transfers data between computer components inside a computer or between computers."
+     },
+     {
+      "Terms": "BUI (Browser User Interface) \n",
+      "Part": "Hardware",
+      "Definitions": "A method of interacting with an application, typically hosted on a remote device, via controls presented within a web browser."
+     },
+     {
+      "Terms": "Byte",
+      "Part": "Hardware",
+      "Definitions": "A unit of data that is eight binary digits long."
+     },
+     {
+      "Terms": "Cache",
+      "Part": "Hardware",
+      "Definitions": "a small, fast local memory that transparently buffers access to a larger but slower or more distant\/higher latency memory or storage device, organised into cache lines."
+     },
+     {
+      "Terms": "Cache line",
+      "Part": "Hardware",
+      "Definitions": "a small block of memory within a cache; the granularity of allocation,refills,eviction; typically 32-128 bytes in size."
+     },
+     {
+      "Terms": "Cache memory",
+      "Part": "Hardware",
+      "Definitions": "Supplementary memory system that temporarily stores frequently used instructions and data for quicker processing by the central processing unit (CPU) of a computer."
+     },
+     {
+      "Terms": "Capacitor",
+      "Part": "Hardware",
+      "Definitions": "A small piece of electrical hardware that can hold electrical energy within a circuit or field."
+     },
+     {
+      "Terms": "Central Processing Unit (CPU)",
+      "Part": "Hardware",
+      "Definitions": "the portion of a computer system that executes the instructions of a computer program."
+     },
+     {
+      "Terms": "Compact Disc Read-Only Memory (CD-ROM)",
+      "Part": "Hardware",
+      "Definitions": "a pre-pressed optical compact disc which contains data or music playback."
+     },
+     {
+      "Terms": "CD-Rs (Compact Disc Recordable)",
+      "Part": "Hardware",
+      "Definitions": "A writable disc upon which a user can write. once and read many times. \n"
+     },
+     {
+      "Terms": "CD-RWs (Compact Disc-Rewritable) \n",
+      "Part": "Hardware",
+      "Definitions": "A digital optical disc storage format. A CD-RW compact disc (CD-RWs) can be written, read, erased, and re-written."
+     },
+     {
+      "Terms": "Circuit",
+      "Part": "Hardware",
+      "Definitions": "A model of computation in which input values proceed through a sequence of gates, each of which computes a function."
+     },
+     {
+      "Terms": "Computer",
+      "Part": "Hardware",
+      "Definitions": "an electronic device that manipulates information, or data. It has the ability to store, retrieve, and process data."
+     },
+     {
+      "Terms": "CISC (Complex Instruction Set Computer)",
+      "Part": "Hardware",
+      "Definitions": "A computer architecture in which single instructions can execute several low-level operations (such as a load from memory, an arithmetic operation, and a memory store) or are capable of multi-step operations or addressing modes within single instructions."
+     },
+     {
+      "Terms": "CMOS (Complementary metal-oxide semiconductor)",
+      "Part": "Hardware",
+      "Definitions": "A type of metal–oxide–semiconductor field-effect transistor (MOSFET) fabrication process that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. \n"
+     },
+     {
+      "Terms": "Control Bus",
+      "Part": "Hardware",
+      "Definitions": "Refers to the bus of a computer that is used by the processor for communicating with several devices connected to it."
+     },
+     {
+      "Terms": "Control Unit \n",
+      "Part": "Hardware",
+      "Definitions": "Circuitry within a computer's processor that directs operations."
+     },
+     {
+      "Terms": "Computer Architecture",
+      "Part": "Hardware",
+      "Definitions": "a description of the structure of a computer system made from component parts."
+     },
+     {
+      "Terms": "Digital Video Disc (DVD)",
+      "Part": "Hardware",
+      "Definitions": "type of optical disc used for data storage and as a platform for multimedia."
+     },
+     {
+      "Terms": "DDR (Double Data Rate)",
+      "Part": "Hardware",
+      "Definitions": "A technique in computing in which the computer bus transfers data on both falling and rising edges of a clock cycle\/signal at a double rate."
+     },
+     {
+      "Terms": "Decode",
+      "Part": "Hardware",
+      "Definitions": "To take out of code and put into understandable language."
+     },
+     {
+      "Terms": "Disk",
+      "Part": "Hardware",
+      "Definitions": "A flat, round plate on which data can be encoded and stored."
+     },
+     {
+      "Terms": "DMA (Direct Memory Access)",
+      "Part": "Hardware",
+      "Definitions": "A method that allows an input\/output (I\/O) device to send or receive data directly to or from the main memory, bypassing the CPU to speed up memory operations."
+     },
+     {
+      "Terms": "Dynamic random access memory (DRAM)",
+      "Part": "Hardware",
+      "Definitions": "a type of random-access memory that stores each bit of data in a separate capacitor within an integrated circuit and which must be periodically refreshed to retain the stored data."
+     },
+     {
+      "Terms": "Embedded systems",
+      "Part": "Hardware",
+      "Definitions": "a combination of computer hardware and software designed for a specific function. eg: Motherboard, Panel PCs."
+     },
+     {
+      "Terms": "EEPROM (Electrically Erasable Programmable Read-Only Memory)",
+      "Part": "Hardware",
+      "Definitions": "It can be erased and reprogrammed (written to) repeatedly by applying an electrical voltage that is higher than normal."
+     },
+     {
+      "Terms": "EPROM (Erasable Programmable Read-Only Memory)",
+      "Part": "Hardware",
+      "Definitions": "Form of computer memory that does not lose its content when the power supply is cut off and that can be erased and reused."
+     },
+     {
+      "Terms": "Execute \n",
+      "Part": "Hardware",
+      "Definitions": "The process by which a computer or virtual machine reads and acts on the instructions of a computer program."
+     },
+     {
+      "Terms": "Flash Memory",
+      "Part": "Hardware",
+      "Definitions": "a type of non volatile computer storage chip that can be electrically erased and reprogrammed."
+     },
+     {
+      "Terms": "Floppy Disk",
+      "Part": "Hardware",
+      "Definitions": "a data storage medium that is composed of a disk of thin, flexible magnetic storage medium encased in a square or rectangular plastic shell."
+     },
+     {
+      "Terms": "Floppy Disk Drive",
+      "Part": "Hardware",
+      "Definitions": "a device for reading floppy disks."
+     },
+     {
+      "Terms": "Gate",
+      "Part": "Hardware",
+      "Definitions": "a device that performs basic logical functions that are fundamental to digital circuits."
+     },
+     {
+      "Terms": "Graphic Processing Unit (GPU)",
+      "Part": "Hardware",
+      "Definitions": "a specialized electronic circuit initially designed to accelerate computer graphics and image processing."
+     },
+     {
+      "Terms": "Hard drive",
+      "Part": "Hardware",
+      "Definitions": "a non-volatile storage device that stores data on rapidly rotating rigid platters with magnetic surfaces."
+     },
+     {
+      "Terms": "Heat sink \n",
+      "Part": "Hardware",
+      "Definitions": "A piece of metal that sits on top of a computer chip such as a CPU and draws power away from components by letting it rise through a series of fins."
+     },
+     {
+      "Terms": "Hardware",
+      "Part": "Hardware",
+      "Definitions": "physical components of a computer."
+     },
+     {
+      "Terms": "Input device",
+      "Part": "Hardware",
+      "Definitions": "any peripheral equipment used to provide data and control signals to an information processing system."
+     },
+     {
+      "Terms": "IC (Integrated Circuit)",
+      "Part": "Hardware",
+      "Definitions": "An assembly of electronic components in which hundreds to millions of transistors, resistors, and capacitors are interconnected and built up on a thin substrate of semiconductor material (usually silicon) to form a small chip or wafer. \n"
+     },
+     {
+      "Terms": "I\/O devices \n",
+      "Part": "Hardware",
+      "Definitions": "A hardware device that has the ability to accept inputted, outputted or other processed data."
+     },
+     {
+      "Terms": "Interrupt Driven \n",
+      "Part": "Hardware",
+      "Definitions": "An operating system in which the interrupt system is the mechanism for reporting all changes in the states of hardware and software resources, and such changes are the events that induce new assignments of these resources to meet work-load demands. \n"
+     },
+     {
+      "Terms": "Interrupt Request (IRQ) \n",
+      "Part": "Hardware",
+      "Definitions": "A signal sent by a device to an operating system, indicating that it requires immediate attention. \n"
+     },
+     {
+      "Terms": "IoT (Internet Of Things) \n",
+      "Part": "Hardware",
+      "Definitions": "Devices with sensors, processing ability, software and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks. \n"
+     },
+     {
+      "Terms": "Instruction Register (IR) \n",
+      "Part": "Hardware",
+      "Definitions": "A key component of the Central Processing Unit (CPU) in a computer. \n"
+     },
+     {
+      "Terms": "Keyboard",
+      "Part": "Hardware",
+      "Definitions": "an arrangement of buttons or keys to act as mechanical levers or electronic switches."
+     },
+     {
+      "Terms": "Memory",
+      "Part": "Hardware",
+      "Definitions": "devices that are used to store data or programs on a temporary or permanent basis for use in an electronic digital computer."
+     },
+     {
+      "Terms": "Monitor",
+      "Part": "Hardware",
+      "Definitions": "an electronic visual display for computers."
+     },
+     {
+      "Terms": "Motherboard",
+      "Part": "Hardware",
+      "Definitions": "a printed circuit board containing the principal components of a computer or other device, with connectors into which other circuit boards can be slotted."
+     },
+     {
+      "Terms": "Mouse",
+      "Part": "Hardware",
+      "Definitions": "a pointing device that functions by detecting two-dimensional motion relative to its supporting surface."
+     },
+     {
+      "Terms": "Mask ROM",
+      "Part": "Hardware",
+      "Definitions": "A read-only memory whose contents are programmed by the integrated circuit manufacturer (rather than by the user)."
+     },
+     {
+      "Terms": "Mass-storage",
+      "Part": "Hardware",
+      "Definitions": "The storage of large amounts of data in a persisting and machine-readable fashion. \n"
+     },
+     {
+      "Terms": "Master Boot Record (MBR) \n\n",
+      "Part": "Hardware",
+      "Definitions": "The first sector of the computer hard drive. It tells the computer how the hard drive is partitioned, and how to load the operating system. \n"
+     },
+     {
+      "Terms": "MHz (Megahertz) \n",
+      "Part": "Hardware",
+      "Definitions": "Megahertz one million cycles per second. MHz is used to measure the speed of certain components such as the CPU, GPU and RAM. Higher numbers are faster as more cycles are completed per second. \n"
+     },
+     {
+      "Terms": "MOS (Metal-Oxide-Semiconductor)",
+      "Part": "Hardware",
+      "Definitions": "A transistor family using field-effect transistors. A subset of MOS, Complementary MOS (usually CMOS), built out of paired N-channel and P-channel MOS transistors, is now the most common form. \n"
+     },
+     {
+      "Terms": "MPEG",
+      "Part": "Hardware",
+      "Definitions": "A standard file format for compressing video images so that they can be stored or sent by email more easily. \n"
+     },
+     {
+      "Terms": "Non-volatile memory",
+      "Part": "Hardware",
+      "Definitions": "memory that can retain the stored data even when not powered."
+     },
+     {
+      "Terms": "Non-Volatile Storage (NVS) \n\n",
+      "Part": "Hardware",
+      "Definitions": "A computer memory that is able to hold saved data even if there is no power, and does not require periodic refreshes of its memory data. \n"
+     },
+     {
+      "Terms": "Optic disc drive",
+      "Part": "Hardware",
+      "Definitions": "a disk drive that uses laser light or electromagnetic waves near the light spectrum as part of the process of reading or writing data to or from optical discs."
+     },
+     {
+      "Terms": "Open Source Hardware",
+      "Part": "Hardware"
+     },
+     {
+      "Terms": "Output Devices \n",
+      "Part": "Hardware",
+      "Definitions": "Any hardware device used to send data from a computer to another device or user.\n"
+     },
+     {
+      "Terms": "Peripherals",
+      "Part": "Hardware",
+      "Definitions": "Peripherals are those devices that connect to the core computer to give it more power and ability."
+     },
+     {
+      "Terms": "Printer",
+      "Part": "Hardware",
+      "Definitions": "a device that accepts text and graphic output from a computer and transfers the information to paper."
+     },
+     {
+      "Terms": "Power Supply Unit (PSU)\n\n",
+      "Part": "Hardware",
+      "Definitions": "A piece of hardware that is used to converts the outlet power into usable power to ensure the normal running of parts within a computer. \n"
+     },
+     {
+      "Terms": "PROM (Programmable Read-Only Memory) \n",
+      "Part": "Hardware",
+      "Definitions": "It is a type of non-volatile computer memory. This means that once data has been written to PROM, it cannot be erased. PROM is used to store programs or firmware for microcontrollers and other digital devices. \n"
+     },
+     {
+      "Terms": "Random Access Memory (RAM)",
+      "Part": "Hardware",
+      "Definitions": "any form of computer data storage that allow stored data to be accessed in any order."
+     },
+     {
+      "Terms": "Read Only Memory (ROM)",
+      "Part": "Hardware",
+      "Definitions": "a type of memory chip that retains its data when its power supply is switched off."
+     },
+     {
+      "Terms": "Register",
+      "Part": "Hardware",
+      "Definitions": "a storage space for units of memory that are used to transfer data for immediate use by the CPU for data processing."
+     },
+     {
+      "Terms": "RISC (Reduced Instruction Set Computer (RISC) \n",
+      "Part": "Hardware",
+      "Definitions": "A microprocessor design that performs fewer computer instructions at higher speeds. \n"
+     },
+     {
+      "Terms": "Storage Device",
+      "Part": "Hardware",
+      "Definitions": "any type of computing hardware that is used for storing, porting or extracting data files and objects."
+     },
+     {
+      "Terms": "Serial Device \n",
+      "Part": "Hardware",
+      "Definitions": "A serial communication interface through which information transfers in or out sequentially one bit at a time."
+     },
+     {
+      "Terms": "SPARC (Scalable Processor Architecture) \n",
+      "Part": "Hardware",
+      "Definitions": "A microprocessor architecture that is widely used in high-performance computing and server applications. \n"
+     },
+     {
+      "Terms": "SRAM (Static Random Access Memory) \n",
+      "Part": "Hardware",
+      "Definitions": "A type of random-access memory (RAM) that uses latching circuitry (flip-flop) to store each bit. \n"
+     },
+     {
+      "Terms": "Transistor",
+      "Part": "Hardware",
+      "Definitions": "An on\/off switch and the fundamental building block of computer circuitry."
+     },
+     {
+      "Terms": "USB flash drive",
+      "Part": "Hardware",
+      "Definitions": "a flash memory device integrated with a USB interface."
+     },
+     {
+      "Terms": "Virtual memory \n",
+      "Part": "Hardware",
+      "Definitions": "A memory management technique where secondary memory can be used as if it were a part of the main memory. \n"
+     },
+     {
+      "Terms": "VAX (Virtual Address Extension) \n",
+      "Part": "Hardware",
+      "Definitions": "A series of computers featuring a 32-bit instruction set architecture (ISA) and virtual memory that was developed and sold by Digital Equipment Corporation (DEC) in the late 20th century. \n"
+     },
+     {
+      "Terms": "Videocard",
+      "Part": "Hardware",
+      "Definitions": "also referred to as a graphics card and several other names, a video card is an expansion card which generates a feed of output images to a display"
+     },
+     {
+      "Terms": "Volatile Memory",
+      "Part": "Hardware",
+      "Definitions": "memory that requires power to maintain the stored information."
+     },
+     {
+      "Terms": "Webcam",
+      "Part": "Hardware",
+      "Definitions": "a video camera that feeds its images in real time to a computer or computer network, often via USB, Ethernet, or Wi-Fi."
+     },
+     {
+      "Terms": "Wires \n",
+      "Part": "Hardware",
+      "Definitions": "Single strand of metal capable of transmitting power or data from one area to another. \n"
+     },
+     {
+      "Terms": "XOR (Exclusive OR) \n",
+      "Part": "Hardware",
+      "Definitions": "Exclusive OR (XOR, EOR or EXOR) is a logical operator which results true when either of the operands are true (one is true and the other one is false) but both are not true and both are not false."
+     },
+     {
+      "Terms": "Artificial intelligence",
+      "Part": "AI",
+      "Definitions": "a subset of computer science that deals with computer systems performing tasks with similar, equal, or superior intelligence to that of a human (e.g. decision-making, object recognition and classification, speech recognition and translation)"
+     },
+     {
+      "Terms": "Artificial general intelligence (AGI)",
+      "Part": "AI",
+      "Definitions": "also known as strong AI, AGI is a type of artificial intelligence that is considered human-like and still in its preliminary stages (more of a hypothetical existence in the present day)."
+     },
+     {
+      "Terms": "Artificial narrow intelligence (ANI)",
+      "Part": "AI",
+      "Definitions": "weak AI, ANI is an artificial intelligence that can only focus on one task or problem at a given time (e.g., playing a game against a human competitor). This is the current existing form of AI. This artificial intelligence algorithm is programmed to solve a limited number of data problems."
+     },
+     {
+      "Terms": "Artificial neural network (ANN)",
+      "Part": "AI",
+      "Definitions": "a network modeled after the human brain by creating an artificial neural system via a pattern-recognizing computer algorithm that learns from, interprets, and classifies sensory data."
+     },
+     {
+      "Terms": "Activation function",
+      "Part": "AI",
+      "Definitions": "It is the main calculative layer of a neural network. The activation function triggers the right decision node within the neural network and displays the node as an output. It converts a series of inputs into singular or multiple output classes."
+     },
+     {
+      "Terms": "Adversarial Attack",
+      "Part": "AI",
+      "Definitions": "A method of manipulating AI models by subtly altering input data to cause incorrect predictions."
+     },
+     {
+      "Terms": "Autonomous cars",
+      "Part": "AI",
+      "Definitions": "Self-drive cars that work on the principle of computer vision to detect, identify, and categorize external obstacles and drive right around them."
+     },
+     {
+      "Terms": "Algorithm",
+      "Part": "AI",
+      "Definitions": "A step-by-step procedure for solving a problem or accomplishing a task."
+     },
+     {
+      "Terms": "Anomaly Detection",
+      "Part": "AI",
+      "Definitions": "The process of identifying abnormal patterns in data."
+     },
+     {
+      "Terms": "Attention Mechanism",
+      "Part": "AI",
+      "Definitions": "A method in neural networks that enables the model to focus on certain parts of the input sequence."
+     },
+     {
+      "Terms": "Autoencoder",
+      "Part": "AI",
+      "Definitions": "A neural network used for dimensionality reduction and data compression."
+     },
+     {
+      "Terms": "Augmented Reality (AR)",
+      "Part": "AI",
+      "Definitions": "Enhancing the real world with computer-generated perceptual information."
+     },
+     {
+      "Terms": "Advanced Encryption Standard (AES)",
+      "Part": "AI",
+      "Definitions": "Symmetric key algorithm used to encrypt and decrypt data."
+     },
+     {
+      "Terms": "Automated decision making",
+      "Part": "AI"
+     },
+     {
+      "Terms": "Auto classfication",
+      "Part": "AI",
+      "Definitions": "The application of machine learning, natural language processing (NLP), and other AI-guided techniques to automatically classify text in a faster, more cost-effective, and more accurate manner."
+     },
+     {
+      "Terms": "Backpropagation",
+      "Part": "AI",
+      "Definitions": "An algorithm used in training neural networks, where the error is propagated backward to adjust weights."
+     },
+     {
+      "Terms": "Bayesian Network",
+      "Part": "AI",
+      "Definitions": "A probabilistic graphical model that represents a set of variables and their conditional dependencies."
+     },
+     {
+      "Terms": "Bias",
+      "Part": "AI",
+      "Definitions": "A systematic error introduced by an algorithm when it consistently makes predictions that are off in one direction."
+     },
+     {
+      "Terms": "Bias in AI",
+      "Part": "AI",
+      "Definitions": "The presence of systematic and unfair prejudice in AI predictions, often due to biased data or models."
+     },
+     {
+      "Terms": "Batch Size",
+      "Part": "AI",
+      "Definitions": "The number of training examples processed before the model’s internal parameters are updated."
+     },
+     {
+      "Terms": "Chatbot",
+      "Part": "AI",
+      "Definitions": "An AI-based program designed to simulate conversation with human users."
+     },
+     {
+      "Terms": "Classification",
+      "Part": "AI",
+      "Definitions": "A task of predicting a discrete label (e.g., spam vs. not spam)."
+     },
+     {
+      "Terms": "Clustering",
+      "Part": "AI",
+      "Definitions": "A type of unsupervised learning that groups data points with similar characteristics."
+     },
+     {
+      "Terms": "Computer Vision",
+      "Part": "AI",
+      "Definitions": "A field of AI that trains machines to interpret and understand visual data from the world."
+     },
+     {
+      "Terms": "Convolutional Neural Network (CNN)",
+      "Part": "AI",
+      "Definitions": "A deep learning model commonly used for analyzing visual imagery."
+     },
+     {
+      "Terms": "Data Augmentation",
+      "Part": "AI",
+      "Definitions": "Techniques used to artificially expand the size of a training dataset by applying transformations."
+     },
+     {
+      "Terms": "Decision Tree",
+      "Part": "AI",
+      "Definitions": "A tree-like model used for making decisions or predictions based on input data."
+     },
+     {
+      "Terms": "Deep Learning (DL)",
+      "Part": "AI",
+      "Definitions": "A specialized subset of ML that uses neural networks with many layers to analyze data."
+     },
+     {
+      "Terms": "Dimensionality Reduction",
+      "Part": "AI",
+      "Definitions": "Reducing the number of features or input variables in a dataset."
+     },
+     {
+      "Terms": "Discriminative Model",
+      "Part": "AI",
+      "Definitions": "A model that learns the boundary between classes in the training data."
+     },
+     {
+      "Terms": "Dropout",
+      "Part": "AI",
+      "Definitions": "A regularization technique where some neurons are randomly turned off during training."
+     },
+     {
+      "Terms": "Epoch",
+      "Part": "AI",
+      "Definitions": "One complete cycle through the training dataset."
+     },
+     {
+      "Terms": "Ethical AI",
+      "Part": "AI",
+      "Definitions": "The development of AI systems that respect privacy, fairness, transparency, and accountability."
+     },
+     {
+      "Terms": "Exploratory Data Analysis (EDA)",
+      "Part": "AI",
+      "Definitions": "The process of analyzing datasets to summarize their main characteristics, often with visual methods."
+     },
+     {
+      "Terms": "Explainable AI (XAI)",
+      "Part": "AI",
+      "Definitions": "AI systems designed to provide transparent and interpretable explanations for their decisions."
+     },
+     {
+      "Terms": "Facial Recognition",
+      "Part": "AI",
+      "Definitions": "A technology used to identify or verify individuals by their facial features."
+     },
+     {
+      "Terms": "Fairness in AI",
+      "Part": "AI",
+      "Definitions": "Ensuring that AI systems do not produce biased or discriminatory outcomes."
+     },
+     {
+      "Terms": "Feature Extraction",
+      "Part": "AI",
+      "Definitions": "The process of identifying and selecting useful features from raw data."
+     },
+     {
+      "Terms": "Few-shot Learning",
+      "Part": "AI",
+      "Definitions": "A model’s ability to learn from a very small amount of data."
+     },
+     {
+      "Terms": "Fraud Detection",
+      "Part": "AI",
+      "Definitions": "Using AI to detect potentially fraudulent activities in financial transactions."
+     },
+     {
+      "Terms": "Fine Tuning",
+      "Part": "AI",
+      "Definitions": "a model involves developers training it further on a specific set of data to improve its performance for a specific application"
+     },
+     {
+      "Terms": "Frontier AI",
+      "Part": "AI",
+      "Definitions": "highly capable general-purpose AI models that can perform a wide variety of tasks and match or exceed the capabilities present in today’s most advanced models"
+     },
+     {
+      "Terms": "Game AI",
+      "Part": "AI",
+      "Definitions": "AI systems designed to play video games either as opponents or partners."
+     },
+     {
+      "Terms": "Generative Adversarial Network (GAN)",
+      "Part": "AI",
+      "Definitions": "A type of model that consists of two neural networks (generator and discriminator) competing with each other to generate realistic data."
+     },
+     {
+      "Terms": "Generative Model",
+      "Part": "AI",
+      "Definitions": "A model that generates new data points based on the patterns learned from training data."
+     },
+     {
+      "Terms": "General AI",
+      "Part": "AI",
+      "Definitions": "A theoretical AI system that can perform any intellectual task that a human can."
+     },
+     {
+      "Terms": "Gradient Descent",
+      "Part": "AI",
+      "Definitions": "An optimization algorithm used to minimize the error in a model by adjusting weights."
+     },
+     {
+      "Terms": "Graphical Processing Units",
+      "Part": "AI",
+      "Definitions": "similiar to central processing units, but its main function is to accelerate computer graphics and image processing."
+     },
+     {
+      "Terms": "Healthcare AI",
+      "Part": "AI",
+      "Definitions": "Applications of AI in medicine, such as diagnosing diseases, predicting outcomes, and personalizing treatments."
+     },
+     {
+      "Terms": "Human-in-the-Loop",
+      "Part": "AI",
+      "Definitions": "AI systems that rely on human feedback and intervention at key stages of decision-making."
+     },
+     {
+      "Terms": "Hyperparameters",
+      "Part": "AI",
+      "Definitions": "External parameters set before training a model, such as learning rate or number of layers."
+     },
+     {
+      "Terms": "Hallucinations",
+      "Part": "AI",
+      "Definitions": "large language models generate plausible sounding but inaccurate text and that calls hallucination effect."
+     },
+     {
+      "Terms": "Image Segmentation",
+      "Part": "AI",
+      "Definitions": "A computer vision task where an image is divided into parts that correspond to different objects or regions."
+     },
+     {
+      "Terms": "K-Nearest Neighbors (KNN)",
+      "Part": "AI",
+      "Definitions": "A simple ML algorithm that classifies data points based on their proximity to neighbors."
+     },
+     {
+      "Terms": "Latent Space",
+      "Part": "AI",
+      "Definitions": "A lower-dimensional space where data is represented after compression, typically by an autoencoder."
+     },
+     {
+      "Terms": "Long Short-Term Memory (LSTM)",
+      "Part": "AI",
+      "Definitions": "A type of RNN designed to avoid long-term dependency problems."
+     },
+     {
+      "Terms": "Machine Learning (ML)",
+      "Part": "AI",
+      "Definitions": "A subset of AI that enables systems to automatically learn and improve from experience without being explicitly programmed."
+     },
+     {
+      "Terms": "Natural Language Processing (NLP)",
+      "Part": "AI",
+      "Definitions": "A branch of AI focused on enabling machines to understand, interpret, and respond to human language."
+     },
+     {
+      "Terms": "Neural Network",
+      "Part": "AI",
+      "Definitions": "A computational model inspired by the human brain, consisting of layers of interconnected nodes"
+     },
+     {
+      "Terms": "Narrow AI",
+      "Part": "AI",
+      "Definitions": "AI that just capables of dealling with some specific tasks."
+     },
+     {
+      "Terms": "Open-source",
+      "Part": "AI",
+      "Definitions": "the underlying code used to run AI models is freely available for testing, scrutiny and improvement"
+     },
+     {
+      "Terms": "Object Detection",
+      "Part": "AI",
+      "Definitions": "A computer vision task that involves identifying objects in an image or video."
+     },
+     {
+      "Terms": "Optical Character Recognition (OCR)",
+      "Part": "AI",
+      "Definitions": "The technology that converts different types of documents, such as scanned paper documents or PDFs, into editable and searchable data"
+     },
+     {
+      "Terms": "Overfitting",
+      "Part": "AI",
+      "Definitions": "When a model learns the training data too well, including noise and outliers, leading to poor performance on new data."
+     },
+     {
+      "Terms": "Personalization",
+      "Part": "AI",
+      "Definitions": "AI systems that adjust their output based on user preferences and behaviors."
+     },
+     {
+      "Terms": "Pose Estimation",
+      "Part": "AI",
+      "Definitions": "Estimating the position of a person or object in a given image or video."
+     },
+     {
+      "Terms": "Predictive Maintenance",
+      "Part": "AI",
+      "Definitions": "Using AI to predict when equipment might fail based on data from sensors and historical performance."
+     },
+     {
+      "Terms": "Random Forest",
+      "Part": "AI",
+      "Definitions": "An ensemble learning method that combines multiple decision trees to improve accuracy."
+     },
+     {
+      "Terms": "Recurrent Neural Network (RNN)",
+      "Part": "AI",
+      "Definitions": "A type of neural network where connections form directed cycles, useful for sequential data."
+     },
+     {
+      "Terms": "Reinforcement Learning",
+      "Part": "AI",
+      "Definitions": "A type of ML where an agent learns by interacting with its environment and receiving feedback in the form of rewards or penalties."
+     },
+     {
+      "Terms": "Regularization",
+      "Part": "AI",
+      "Definitions": "Techniques used to reduce overfitting by penalizing complexity in the model."
+     },
+     {
+      "Terms": "Regression",
+      "Part": "AI",
+      "Definitions": "A task of predicting a continuous value (e.g., predicting house prices)."
+     },
+     {
+      "Terms": "Robotics",
+      "Part": "AI",
+      "Definitions": "The branch of AI that deals with the design and operation of robots."
+     },
+     {
+      "Terms": "Sentiment Analysis",
+      "Part": "AI",
+      "Definitions": "The use of NLP to determine the sentiment expressed in a piece of text."
+     },
+     {
+      "Terms": "Smart Home",
+      "Part": "AI",
+      "Definitions": "Using AI to automate household functions like lighting, security, and temperature control."
+     },
+     {
+      "Terms": "Speech Synthesis",
+      "Part": "AI",
+      "Definitions": "AI that generates human-like speech from text."
+     },
+     {
+      "Terms": "Speech-to-Text",
+      "Part": "AI",
+      "Definitions": "Converting spoken words into written text using AI."
+     },
+     {
+      "Terms": "Supervised Learning",
+      "Part": "AI",
+      "Definitions": "A type of ML where the model is trained on labeled data."
+     },
+     {
+      "Terms": "Support Vector Machine (SVM)",
+      "Part": "AI",
+      "Definitions": "A supervised learning algorithm used for classification and regression tasks."
+     },
+     {
+      "Terms": "Supper-intelligence",
+      "Part": "AI",
+      "Definitions": "A theoretical form of AI that has intelligence greater than humans and exceeds their cognitive performance in most domains"
+     },
+     {
+      "Terms": "Testing Data",
+      "Part": "AI",
+      "Definitions": "Data used to evaluate the performance of a trained model."
+     },
+     {
+      "Terms": "Text-to-Speech (TTS)",
+      "Part": "AI",
+      "Definitions": "Converting written text into spoken voice using AI."
+     },
+     {
+      "Terms": "Training Data Sets",
+      "Part": "AI",
+      "Definitions": "Data used to teach an AI or ML model."
+     },
+     {
+      "Terms": "Transfer Learning",
+      "Part": "AI",
+      "Definitions": "A technique where a model trained on one task is reused or fine-tuned for another task."
+     },
+     {
+      "Terms": "Transformer",
+      "Part": "AI",
+      "Definitions": "A neural network architecture primarily used for processing sequential data like language."
+     },
+     {
+      "Terms": "Underfitting",
+      "Part": "AI",
+      "Definitions": "When a model is too simple and fails to capture the patterns in the data, leading to poor performance."
+     },
+     {
+      "Terms": "Unsupervised Learning",
+      "Part": "AI",
+      "Definitions": "A type of ML where the model is trained on unlabeled data to identify patterns."
+     },
+     {
+      "Terms": "Validation Data",
+      "Part": "AI",
+      "Definitions": "Data used to fine-tune a model during training."
+     },
+     {
+      "Terms": "Variance",
+      "Part": "AI",
+      "Definitions": "The model’s sensitivity to small changes in the training dataset."
+     },
+     {
+      "Terms": "Virtual Assistant",
+      "Part": "AI",
+      "Definitions": "An AI system designed to assist users by answering questions, scheduling tasks, and more (e.g., Siri, Alexa)."
+     },
+     {
+      "Terms": "Virtual Reality (VR)",
+      "Part": "AI",
+      "Definitions": "An immersive experience created by computer-generated simulations of environments."
+     },
+     {
+      "Terms": "Weight",
+      "Part": "AI",
+      "Definitions": "The parameter within a machine learning model that transforms input data within the model's architecture."
+     },
+     {
+      "Terms": "Word Embedding",
+      "Part": "AI",
+      "Definitions": "A representation of words in a continuous vector space where words with similar meanings are close together."
+     },
+     {
+      "Terms": "XOR Problem",
+      "Part": "AI",
+      "Definitions": "A classic problem in neural networks that is not linearly separable and showcases the need for non-linear activation functions."
+     },
+     {
+      "Terms": "YOLO (You Only Look Once)",
+      "Part": "AI",
+      "Definitions": "A real-time object detection system that divides images into grids and predicts bounding boxes for object detection."
+     },
+     {
+      "Terms": "Zero-shot Learning",
+      "Part": "AI",
+      "Definitions": "A model’s ability to classify data from categories it has never seen before."
+     },
+     {
+      "Terms": "Access Control",
+      "Part": "Networks",
+      "Definitions": "Mechanisms that regulate who can view or use resources in a computing environment."
+     },
+     {
+      "Terms": "Address",
+      "Part": "Networks",
+      "Definitions": "Unique identifier for a specific computer or device on a network."
+     },
+     {
+      "Terms": "Administrator",
+      "Part": "Networks",
+      "Definitions": "User with full control over a network or individual computer."
+     },
+     {
+      "Terms": "Address Resolution Protocol (ARP)",
+      "Part": "Networks",
+      "Definitions": "Protocol used to map an IP address to a physical address, such as a MAC address."
+     },
+     {
+      "Terms": "Access Control List (ACL)",
+      "Part": "Networks",
+      "Definitions": "A set of rules that controls traffic in and out of a network or individual device."
+     },
+     {
+      "Terms": "Artificial immune system",
+      "Part": "Networks",
+      "Definitions": "A technique of intelligent, fuzzy neural networks or rule-based machine learning systems used for the vernacular immune system. The logic is built using reactive expressions to solve a particular problem, just like the immune system."
+     },
+     {
+      "Terms": "Access Point (AP)",
+      "Part": "Networks",
+      "Definitions": "A device that allows wireless devices to connect to a wired network."
+     },
+     {
+      "Terms": "Artificial neural network (ANN)",
+      "Part": "Networks",
+      "Definitions": "a network modeled after the human brain by creating an artificial neural system via a pattern-recognizing computer algorithm that learns from, interprets, and classifies sensory data."
+     },
+     {
+      "Terms": "Address Resolution Protocol (ARP)",
+      "Part": "Networks",
+      "Definitions": "Protocol for mapping an Internet Protocol address (IP address) to a physical machine address that is recognized in the local network."
+     },
+     {
+      "Terms": "Ad Hoc Network",
+      "Part": "Networks",
+      "Definitions": "A decentralized wireless network where devices communicate directly without pre-existing infrastructure."
+     },
+     {
+      "Terms": "Application Layer",
+      "Part": "Networks",
+      "Definitions": "The top layer in the OSI model, responsible for network services like email, file transfer, and web browsing."
+     },
+     {
+      "Terms": "AI-Powered Network Management",
+      "Part": "Networks",
+      "Definitions": "The use of AI to optimize and manage network resources dynamically."
+     },
+     {
+      "Terms": "AI-Driven Cybersecurity",
+      "Part": "Networks",
+      "Definitions": "The application of AI in identifying and responding to cyber threats in real-time."
+     },
+     {
+      "Terms": "Anomaly Detection",
+      "Part": "Networks",
+      "Definitions": "The use of AI techniques to detect unusual patterns in network traffic that may indicate security breaches."
+     },
+     {
+      "Terms": "Bandwidth",
+      "Part": "Networks",
+      "Definitions": "The maximum rate of data transfer across a network, typically measured in bits per second (bps)."
+     },
+     {
+      "Terms": "Bluetooth",
+      "Part": "Networks",
+      "Definitions": "A wireless technology standard for exchanging data over short distances using radio waves."
+     },
+     {
+      "Terms": "Bridge",
+      "Part": "Networks",
+      "Definitions": "A device that connects and filters traffic between two or more network segments to reduce network collisions."
+     },
+     {
+      "Terms": "Broadcast",
+      "Part": "Networks",
+      "Definitions": "The transmission of a message to all devices on a network."
+     },
+     {
+      "Terms": "Bandwidth Optimization",
+      "Part": "Networks",
+      "Definitions": "The use of AI algorithms to allocate network bandwidth efficiently."
+     },
+     {
+      "Terms": "Botnet Detection Using AI",
+      "Part": "Networks",
+      "Definitions": "AI methods that detect networks of compromised devices used in coordinated cyberattacks."
+     },
+     {
+      "Terms": "Client-Server Model",
+      "Part": "Networks",
+      "Definitions": "A networking architecture where client devices request services and resources from a central server."
+     },
+     {
+      "Terms": "Collision Domain",
+      "Part": "Networks",
+      "Definitions": "A network segment where data packets can collide, potentially leading to transmission errors."
+     },
+     {
+      "Terms": "Convolutional Neural Network (CNN)",
+      "Part": "Networks",
+      "Definitions": "A type of neural network often used in AI for image recognition and classification."
+     },
+     {
+      "Terms": "Data Link Layer",
+      "Part": "Networks",
+      "Definitions": "The second layer in the OSI model responsible for node-to-node data transfer and error detection\/correction."
+     },
+     {
+      "Terms": "Domain Name System (DNS)",
+      "Part": "Networks",
+      "Definitions": "A system that translates human-friendly domain names into IP addresses."
+     },
+     {
+      "Terms": "Dynamic Host Configuration Protocol (DHCP)",
+      "Part": "Networks",
+      "Definitions": "A network protocol that automatically assigns IP addresses to devices."
+     },
+     {
+      "Terms": "Decentralized Network",
+      "Part": "Networks",
+      "Definitions": "A network architecture without a central authority, where decisions and resources are distributed."
+     },
+     {
+      "Terms": "Deep Packet Inspection (DPI)",
+      "Part": "Networks",
+      "Definitions": "A method of examining the content of data packets to detect malicious activity."
+     },
+     {
+      "Terms": "Denial of Service (DoS) Attack",
+      "Part": "Networks",
+      "Definitions": "An attack that floods a network with traffic to overwhelm its capacity and prevent legitimate use."
+     },
+     {
+      "Terms": "Ethernet",
+      "Part": "Networks",
+      "Definitions": "A common wired networking technology used in LANs (Local Area Networks)."
+     },
+     {
+      "Terms": "Edge Computing",
+      "Part": "Networks",
+      "Definitions": "A network architecture where computation is performed at or near the data source, reducing latency"
+     },
+     {
+      "Terms": "Encryption",
+      "Part": "Networks",
+      "Definitions": "The process of converting data into a coded format to protect it from unauthorized access."
+     },
+     {
+      "Terms": "Firewall with AI",
+      "Part": "Networks",
+      "Definitions": "A firewall that uses AI to automatically adjust its rules and detect sophisticated threats."
+     },
+     {
+      "Terms": "Firewall",
+      "Part": "Networks",
+      "Definitions": "A network security system that monitors and controls incoming and outgoing network traffic based on security rules."
+     },
+     {
+      "Terms": "Frame",
+      "Part": "Networks",
+      "Definitions": "A unit of data that includes addressing information used for transmission at the Data Link layer."
+     },
+     {
+      "Terms": "Federated Learning",
+      "Part": "Networks",
+      "Definitions": "A machine learning approach where the model is trained across multiple decentralized devices using local data."
+     },
+     {
+      "Terms": "Feedforward Neural Network",
+      "Part": "Networks",
+      "Definitions": "A type of neural network where connections do not form cycles, used for supervised learning tasks"
+     },
+     {
+      "Terms": "Fog Computing",
+      "Part": "Networks",
+      "Definitions": "An extension of cloud computing that brings computational resources closer to the network edge to support real-time applications."
+     },
+     {
+      "Terms": "Gateway",
+      "Part": "Networks",
+      "Definitions": "A device that connects two different networks, often translating data between different protocols."
+     },
+     {
+      "Terms": "Generative Adversarial Network (GAN)",
+      "Part": "Networks",
+      "Definitions": "A neural network model that consists of two networks (generator and discriminator) competing to generate realistic data."
+     },
+     {
+      "Terms": "Hub",
+      "Part": "Networks",
+      "Definitions": "A network device that connects multiple devices and sends the received signal to all connected devices."
+     },
+     {
+      "Terms": "Hopfield Network",
+      "Part": "Networks",
+      "Definitions": "A type of recurrent neural network used for associative memory tasks in AI."
+     },
+     {
+      "Terms": "Hybrid Neural Network",
+      "Part": "Networks",
+      "Definitions": "A network combining multiple types of neural architectures for better performance across different tasks."
+     },
+     {
+      "Terms": "Internet Protocol (IP)",
+      "Part": "Networks",
+      "Definitions": "A communication protocol for routing data across network boundaries, forming the backbone of the internet."
+     },
+     {
+      "Terms": "Internet of Things (IoT)",
+      "Part": "Networks",
+      "Definitions": "A network of physical devices embedded with sensors, software, and other technologies that communicate over the internet."
+     },
+     {
+      "Terms": "IP Address",
+      "Part": "Networks",
+      "Definitions": "A unique identifier for a device on a network, used for routing data."
+     },
+     {
+      "Terms": "Intrusion Detection System (IDS)",
+      "Part": "Networks",
+      "Definitions": "A system that monitors network traffic for suspicious activity or policy violations."
+     },
+     {
+      "Terms": "Intrusion Prevention System (IPS)",
+      "Part": "Networks",
+      "Definitions": "A system that detects and prevents potential threats in network traffic."
+     },
+     {
+      "Terms": "Latency",
+      "Part": "Networks",
+      "Definitions": "The time it takes for a packet of data to travel from the source to the destination."
+     },
+     {
+      "Terms": "Local Area Network (LAN)",
+      "Part": "Networks",
+      "Definitions": "A network that connects computers within a limited area, like a home, office, or building."
+     },
+     {
+      "Terms": "Latency Optimization with AI",
+      "Part": "Networks",
+      "Definitions": "AI techniques used to minimize network delays in critical applications like autonomous driving."
+     },
+     {
+      "Terms": "MAC Address",
+      "Part": "Networks",
+      "Definitions": "A hardware identification number that uniquely identifies each device on a network."
+     },
+     {
+      "Terms": "Mesh Network",
+      "Part": "Networks",
+      "Definitions": "A type of network where devices (nodes) are interconnected and can relay data to one another."
+     },
+     {
+      "Terms": "Metropolitan Area Network (MAN)",
+      "Part": "Networks",
+      "Definitions": "A network that spans a city or a large campus."
+     },
+     {
+      "Terms": "Multiplexing",
+      "Part": "Networks",
+      "Definitions": "A technique that combines multiple signals or data streams into one for transmission."
+     },
+     {
+      "Terms": "Malware Detection with AI",
+      "Part": "Networks",
+      "Definitions": "The use of AI to identify and classify malicious software in network traffic or files."
+     },
+     {
+      "Terms": "Man-in-the-Middle (MITM) Attack",
+      "Part": "Networks",
+      "Definitions": "A cyberattack where the attacker intercepts and possibly alters communication between two parties."
+     },
+     {
+      "Terms": "Network Address Translation (NAT)",
+      "Part": "Networks",
+      "Definitions": "A method that allows multiple devices on a local network to share a single public IP address."
+     },
+     {
+      "Terms": "Network Interface Card (NIC)",
+      "Part": "Networks",
+      "Definitions": "A hardware component that connects a computer to a network."
+     },
+     {
+      "Terms": "Network Layer",
+      "Part": "Networks",
+      "Definitions": "The third layer in the OSI model responsible for routing data across networks."
+     },
+     {
+      "Terms": "Network Traffic Analysis with AI",
+      "Part": "Networks",
+      "Definitions": "The use of AI to analyze and predict network traffic patterns to optimize performance and security."
+     },
+     {
+      "Terms": "Neural Architecture Search (NAS)",
+      "Part": "Networks",
+      "Definitions": "An AI method to automatically discover the best neural network architectures for a given task."
+     },
+     {
+      "Terms": "Packet Switching",
+      "Part": "Networks",
+      "Definitions": "A method of data transmission where data is broken into packets and transmitted over various routes."
+     },
+     {
+      "Terms": "Packet Filtering",
+      "Part": "Networks",
+      "Definitions": "A firewall technique that controls network access by analyzing incoming and outgoing packets."
+     },
+     {
+      "Terms": "Peer-to-Peer (P2P)",
+      "Part": "Networks",
+      "Definitions": "A network where devices communicate directly with each other without a central server."
+     },
+     {
+      "Terms": "Physical Layer",
+      "Part": "Networks",
+      "Definitions": "The first layer in the OSI model responsible for the physical connection between devices, such as cables and switches."
+     },
+     {
+      "Terms": "Port Forwarding",
+      "Part": "Networks",
+      "Definitions": "A technique used to allow external devices to connect to a specific device within a private network."
+     },
+     {
+      "Terms": "Protocol",
+      "Part": "Networks",
+      "Definitions": "A set of rules governing data communication between devices on a network."
+     },
+     {
+      "Terms": "Proxy Server",
+      "Part": "Networks",
+      "Definitions": "A server that acts as an intermediary between a client and the internet to enhance security or control internet traffic."
+     },
+     {
+      "Terms": "Penetration Testing",
+      "Part": "Networks",
+      "Definitions": "A method of evaluating network security by simulating cyberattacks."
+     },
+     {
+      "Terms": "Phishing Detection with AI",
+      "Part": "Networks",
+      "Definitions": "AI-based systems designed to detect and block phishing attacks in email or web traffic."
+     },
+     {
+      "Terms": "Router",
+      "Part": "Networks",
+      "Definitions": "A device that forwards data packets between networks, often connecting local networks to the internet."
+     },
+     {
+      "Terms": "Recurrent Neural Network (RNN)",
+      "Part": "Networks",
+      "Definitions": "A type of neural network used in AI that processes sequences of data with temporal dependencies."
+     },
+     {
+      "Terms": "Reinforcement Learning in Network Optimization",
+      "Part": "Networks",
+      "Definitions": "Using AI techniques to optimize network performance by continuously learning from network behaviors."
+     },
+     {
+      "Terms": "Session Layer",
+      "Part": "Networks",
+      "Definitions": "The fifth layer in the OSI model, responsible for managing and controlling the connections between computers."
+     },
+     {
+      "Terms": "Simple Network Management Protocol (SNMP)",
+      "Part": "Networks",
+      "Definitions": "A protocol used for managing and monitoring network devices."
+     },
+     {
+      "Terms": "Subnet Mask",
+      "Part": "Networks",
+      "Definitions": "A number that divides an IP address into network and host portions, defining a network's scope."
+     },
+     {
+      "Terms": "Switch",
+      "Part": "Networks",
+      "Definitions": "A network device that connects multiple devices and directs data only to the device it is intended for."
+     },
+     {
+      "Terms": "Self-Organizing Network",
+      "Part": "Networks",
+      "Definitions": "A network that uses AI algorithms to automatically configure and optimize its parameters based on changing conditions."
+     },
+     {
+      "Terms": "Software-Defined Networking (SDN) with AI",
+      "Part": "Networks",
+      "Definitions": "The use of AI in SDN to manage and automate network functions dynamically."
+     },
+     {
+      "Terms": "Spiking Neural Network (SNN)",
+      "Part": "Networks",
+      "Definitions": "A type of neural network that models biological neurons more closely, used in AI for processing temporal data."
+     },
+     {
+      "Terms": "Spoofing Attack",
+      "Part": "Networks",
+      "Definitions": "A type of attack where the attacker disguises themselves as another entity to gain unauthorized access."
+     },
+     {
+      "Terms": "SSL\/TLS (Secure Sockets Layer\/Transport Layer Security)",
+      "Part": "Networks",
+      "Definitions": "Protocols used to secure communications over a network."
+     },
+     {
+      "Terms": "Swarm Intelligence",
+      "Part": "Networks",
+      "Definitions": "The collective behavior of decentralized, self-organized systems, often applied in AI to solve network problems."
+     },
+     {
+      "Terms": "TCP\/IP (Transmission Control Protocol\/Internet Protocol)",
+      "Part": "Networks",
+      "Definitions": "A suite of communication protocols used to interconnect network devices on the internet."
+     },
+     {
+      "Terms": "Time Division Multiplexing (TDM)",
+      "Part": "Networks",
+      "Definitions": "A method of transmitting multiple signals over a single communication channel by dividing them into time slots."
+     },
+     {
+      "Terms": "Transmission Control Protocol (TCP)",
+      "Part": "Networks",
+      "Definitions": "A connection-oriented protocol that ensures reliable data transmission over a network."
+     },
+     {
+      "Terms": "Traffic Prediction Using AI",
+      "Part": "Networks",
+      "Definitions": "The use of AI models to predict and manage network congestion by analyzing traffic patterns."
+     },
+     {
+      "Terms": "Trojan Horse",
+      "Part": "Networks",
+      "Definitions": "A type of malware that disguises itself as legitimate software to infiltrate a network."
+     },
+     {
+      "Terms": "Unicast",
+      "Part": "Networks",
+      "Definitions": "The transmission of data from one device to another specific device on a network."
+     },
+     {
+      "Terms": "Unsupervised Learning in Network Security",
+      "Part": "Networks",
+      "Definitions": "The use of unsupervised machine learning models to detect anomalies or threats in network traffic."
+     },
+     {
+      "Terms": "Virtual LAN (VLAN)",
+      "Part": "Networks",
+      "Definitions": "A logical subdivision of a physical network, enabling the grouping of devices as if they were on the same network."
+     },
+     {
+      "Terms": "Virtual Private Network (VPN)",
+      "Part": "Networks",
+      "Definitions": "A secure tunnel through which data can be transmitted over the internet as if it were on a private network."
+     },
+     {
+      "Terms": "Voice over IP (VoIP)",
+      "Part": "Networks",
+      "Definitions": "A technology that allows voice communication to occur over the internet rather than traditional phone lines."
+     },
+     {
+      "Terms": "Wide Area Network (WAN)",
+      "Part": "Networks",
+      "Definitions": "A network that extends over a large geographical area, connecting LANs and other networks."
+     },
+     {
+      "Terms": "Wi-Fi",
+      "Part": "Networks",
+      "Definitions": "A technology that allows wireless devices to connect to the internet or a network using radio waves."
+     },
+     {
+      "Terms": "Worm",
+      "Part": "Networks",
+      "Definitions": "A type of malware that replicates itself to spread to other computers on a network."
+     },
+     {
+      "Terms": "Zero Trust Network with AI",
+      "Part": "Networks",
+      "Definitions": "A security model that assumes no implicit trust in network users, where AI continuously verifies each access attempt."
+     }
+    ]
+    }

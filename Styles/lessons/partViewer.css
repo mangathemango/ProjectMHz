@@ -37,6 +37,7 @@
     align-items: center;
     font-size: 40px;
     animation: var(--wave-animation);
+    z-index: 1;
 }
 
 #part-close-button:hover {
@@ -60,7 +61,6 @@
     height: 80%;
     width: 100%;
     transition: all 1s ease;
-    overflow: hidden;
     animation: var(--wave-animation);
 }
 
@@ -74,7 +74,7 @@
 .part-viewer {
     background-color: darkcyan;
     height: calc(100% - 45px);
-    width: 90%;
+    width: 80%;
     border-radius: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,6 +82,7 @@
     overflow: hidden;
     padding: 15px;
     gap: 15px;
+    transform: skewY(2deg);
 }
 
 .part-viewer-button {
