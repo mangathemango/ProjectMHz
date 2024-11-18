@@ -17,10 +17,8 @@ const updateGlossary = () => {
     })
 }
 const renderScreen = (screenName) => {
-    if (screenName == "My Statistics") {
-        alert("This function is not available yet")
-        return
-    }
+    alert("Cooking still in progress :D")
+    return
     const mainScreen = document.getElementById("main-screen")
     const screenOrder = ["Playground", "Materials", "Tests", "Dictionary", "About Us"]
     mainScreen.style.transform = `translateX(-${screenOrder.indexOf(screenName) * 10}%)`

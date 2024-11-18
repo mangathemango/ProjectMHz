@@ -1,7 +1,7 @@
 @import url(bookmark.css);
 @import url(aboutus.css);
-@import url(lessons/main.css);
-@import url(glossary.css);
+@import url(playground.css);
+
 
 
 * {
@@ -9,6 +9,7 @@
     padding: 0;
     font-family: "Fredoka", sans-serif;
 }
+
 
 :root {
     --network-bg: lightgreen;
