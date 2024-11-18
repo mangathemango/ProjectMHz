@@ -1,0 +1,4 @@
+
+[submodule "8800-simulator"]
+	path = Playgrounds/8800-simulator
+	url = https://github.com/wixette/8800-simulator

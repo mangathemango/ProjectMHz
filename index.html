@@ -22,76 +22,22 @@
       <div id="bookmark-container">
         <div id="bookmark-logo"></div>
         <div id="bookmark-navigations">
-          <button onclick="renderScreen('Learn')" id="bookmark-lessons" class="bookmark-button">Learn</button>
-          <button onclick="renderScreen('Study Guide')" id="bookmark-lessons" class="bookmark-button">Study Guide</button>
-          <button onclick="renderScreen('Glossary')" id="bookmark-glossary" class="bookmark-button">Glossary</button>
-          <button onclick="renderScreen('My Statistics')" id="bookmark-my-stats" class="bookmark-button">My Statistics</button>
+          <button onclick="renderScreen('Playground')" id="bookmark-lessons" class="bookmark-button">Playground</button>
+          <button onclick="renderScreen('Materials')" id="bookmark-lessons" class="bookmark-button">Materials</button>
+          <button onclick="renderScreen('Tests')" id="bookmark-glossary" class="bookmark-button">Tests</button>
+          <button onclick="renderScreen('Dictionary')" id="bookmark-my-stats" class="bookmark-button">Dictionary</button>
           <button onclick="renderScreen('About Us')" id="bookmark-about-us" class="bookmark-button">About Us</button>
         </div>
       </div>
 
     <div id="main-screen">
 
-      <div id="lessons" class="screen">
-        <div id="part-selector-container">
-          <div id="part-close-button-hidden" class="fa-solid fa-arrow-left" onclick="javascript:closePart()"></div>
-          <div class="part-selector-title-container">
-            <p id="part-selector-title">LESSONS</p>
-          </div>
-          <div id="part-selector-buttons-container">
-            <div class="part-selector-button" onclick="javascript: showPart('part-A')" id="part-A">
-              <label class="part-selector-button-label">PART A</label>
-              <p class="part-selector-button-description">Introduction<br>to AI</p>
-            </div>
-            <div class="part-selector-button" onclick="javascript: showPart('part-B')" id="part-B">
-              <label class="part-selector-button-label">PART B</label>
-              <p class="part-selector-button-description">Behaviorist AI</p>
-            </div>
-            <div class="part-selector-button" onclick="javascript: showPart('part-C')" id="part-C">
-              <label class="part-selector-button-label">PART C</label>
-              <p class="part-selector-button-description">Hardware<br>for AI</p>
-            </div>
-            <div class="part-selector-button" onclick="javascript: showPart('part-D')" id="part-D">
-              <label class="part-selector-button-label">PART D</label>
-              <p class="part-selector-button-description">Networking<br>for AI</p>
-            </div>
-          </div>
-          <div class="part-viewer-container hidden-part-container">
-            <div class="part-viewer"> 
-              <div class="part-viewer-button" onclick="javascript:showLesson('Presentation')">
-                <i class="part-viewer-icon fa-solid fa-person-chalkboard"></i>
-                <p class="part-viewer-title">Presentation</p>
-                <p class="part-viewer-subtitle">View our powerpoints</p>
-              </div>
-              <div class="part-viewer-button" onclick="javascript:showLesson('Study Guide')">
-                <i class="part-viewer-icon fa-solid fa-book-open"></i>
-                <a class="part-viewer-title">Read</a>
-                <p class="part-viewer-subtitle">Hop to corresponding page<br>in study guide</p>
-              </div>
-              <div class="part-viewer-button" onclick="javascript:showLesson('Video')">
-                <i class="part-viewer-icon fa-solid fa-video"></i>
-                <p class="part-viewer-title">Video</p>
-                <p class="part-viewer-subtitle">Watch our youtube videos</p>
-              </div>
-              <div class="part-viewer-button" onclick="javascript:showLesson('Practice')">
-                <i class="part-viewer-icon fa-solid fa-pen"></i>
-                <p class="part-viewer-title">Practice</p>
-                <p class="part-viewer-subtitle">Test your new knowledge!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="lessons-file-viewer">
-          <i class="fa-solid fa-circle-xmark" id="lessons-close-file-button" onclick="closelessonsfile()"></i>
-          <iframe id="lessons-file" src="" frameborder="0"></iframe>
-        </div>
+      <div class="screen" id="playground">
+        
       </div>
-      <iframe src="" loading="lazy" width="100%" height="100%" frameborder="0" id="study-guide"></iframe>
-      <div id="glossary" class="screen">
-        <div id="glossary-container">
-        </div>
-      </div>
-      <div class="screen"></div>
+      <div class="screen" id="materials"></div>
+      <div class="screen" id="tests"></div>
+      <div class="screen" id="dictionary"></div>
       <div id="about-us" class="screen">
         <div id="about-us-file-container">
           <div id="about-us-29-9" class="about-us-date-container">

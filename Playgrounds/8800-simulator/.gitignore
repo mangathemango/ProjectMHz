@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+*~
+.DS_Store
+build/*
+dist/*
+.coverage
+.tern-port

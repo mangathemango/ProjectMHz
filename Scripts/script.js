@@ -21,11 +21,8 @@ const renderScreen = (screenName) => {
         alert("This function is not available yet")
         return
     }
-    if (screenName === "Study Guide") {
-        document.getElementById("study-guide").setAttribute("src","Data/Study Guide.pdf")
-    }
     const mainScreen = document.getElementById("main-screen")
-    const screenOrder = [ "Learn", "Study Guide",  "Glossary", "My Statistics","About Us"]
+    const screenOrder = ["Playground", "Materials", "Tests", "Dictionary", "About Us"]
     mainScreen.style.transform = `translateX(-${screenOrder.indexOf(screenName) * 10}%)`
 }
 
