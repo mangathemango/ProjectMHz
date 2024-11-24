@@ -9,16 +9,7 @@
     justify-content: space-evenly;
     align-items: center;
     max-height: calc(100vh - 50px);
-}
-
-#about-us-file-container {
-    width: 60%;
-    height: 90%;
-    background-color: var(--background-color);
-    border: var(--border-color) 10px solid;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center ;
+    height: 100%;
 }
 
 #about-us-description-container {
@@ -50,88 +41,110 @@
     overflow: scroll;
 }
 
-.about-us-date-container {
+#about-us-members-container {
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.member-container {
+    align-self: center;
     width: 90%;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px ;
-}
-
-.about-us-file-date-title {
-    color: white;
-    width: 100%;
-    font-size: 40px;
-    border-bottom: white solid 3px;
-}
-
-.about-us-file-button-container {
-    height: 65%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.about-us-file-button {
-    margin-right: 20px;
-    height: 70%;
-    width: 25%;
-    border: white solid 4px;
+    height: 90%;
+    overflow: hidden;
+    background-size: cover;
     border-radius: 10px;
+    border: rgb(255, 255, 255) solid 5px;
+}
+
+#mango {
+    background-image: url(../Assets/MemberPics/Mango.jpg);
+    background-position: center;
+}
+
+#jade {
+    background-image: url(../Assets/MemberPics/Jade.jpg);
+    background-position: top;
+}
+#tony {
+    background-image: url(../Assets/MemberPics/Tony.jpg);
+    
+}
+#faiza {
+    background-image: url(../Assets/MemberPics/Faiza.jpg);
+    background-position: center;
+}
+#ryan {
+    background-image: url(../Assets/MemberPics/Ryan.jpg);
+    background-position: center;
+}
+
+#darrel {
+    background-image: url(../Assets/MemberPics/Darrel.jpg);
+    background-position: top 10px;
+}
+
+.member-info {
+    opacity: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    transition: all ease 0.5s;
-}
-
-.about-us-file-label {
-    padding: 2px;
     text-align: center;
-}
-
-.about-us-file-button:hover {
-    background-color: white;
-    color: black;
-    transform: translateY(-5px);
-}
-
-#about-us-file-viewer {
-    height: 95%;
-    width: 9.5%;
-    position: absolute;
-    transform: translateY(110%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border: white solid 10px;
-    border-radius: 10px;
-    transition: all 1s ease-in-out;
-}
-
-#about-us-file {
-    width: 97.5%;
-    height: 95%;
-}
-
-#about-us-close-file-button {
-    color: black;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 40px;
-    position: absolute;
-    top: -15px;
-    left: -20px;
-    transition: all 0.3s ease-in-out;
-    border: white solid 5px;
-}
-
-#about-us-close-file-button:hover {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.708);
     color: white;
-    background-color: black;
+    transition: all ease 0.2s;
 }
 
+.member-container:hover .member-info {
+    opacity: 1;
+    transform: translateY(0);
 
+}
+
+.member-info b {
+    font-size: 40px;
+}
+
+#member-title {
+    font-size: 50px;
+    background-color: black;
+    border: white solid 5px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#about-us-members {
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-us-description-text::-webkit-scrollbar {
+    background-color: black;
+    scrollbar-width: thin;
+}
+
+#about-us-description-text::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: inset 0 0 5px grey;
+}
+
+#about-us-description-text::-webkit-scrollbar-track {
+    border: white solid 2px;
+    border-radius: 20px;
+}

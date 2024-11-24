@@ -1,0 +1,26 @@
+{
+    "A": {
+        "Name": "Intro to AI",
+        "1": "Early Days of AI",
+        "2": "Emergence of Modern AI",
+        "3": "Future of AI"
+    },
+    "B": {
+        "Name": "Behaviorist AI",
+        "1": "Understanding Behaviorist AI",
+        "2": "Reinforcement Learning",
+        "3": "Markov Decision Process"
+    },
+    "C": {
+        "Name": "Hardware",
+        "1": "Number Systems",
+        "2": "The Computer Architecture",
+        "3": "Program Execution"
+    },
+    "D": {
+        "Name": "Networks",
+        "1": "Network Devices",
+        "2": "Introduction to TCP/IP",
+        "3": "Data Flow"
+    }
+}

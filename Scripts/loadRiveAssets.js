@@ -1,3 +1,16 @@
+
+const handleLoadingComplete = () => {
+    setTimeout(() => {
+        loadingScreen.stateMachineInputs('Loading State').find(i => i.name === 'Loading Complete').fire();
+        setTimeout(() => {
+            document.getElementById("loading-container").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("loading-container").remove();
+            }, 500);
+        }, 2500);       
+    }, 100);
+};
+
 let loadingScreenLoaded = false
 const loadingScreen = new rive.Rive({
     src: "./Assets/Rive/MHz.riv", 
@@ -20,16 +33,15 @@ const backgroundScreen = new rive.Rive({
     layout: layout
 });
 
-const handleLoadingComplete = () => {
-    setTimeout(() => {
-        loadingScreen.stateMachineInputs('Loading State').find(i => i.name === 'Loading Complete').fire();
-        setTimeout(() => {
-            document.getElementById("loading-container").style.opacity = "0";
-            setTimeout(() => {
-                document.getElementById("loading-container").remove();
-            }, 500);
-        }, 2500);       
-    }, 100);
-};
+const hardwareSim = new rive.Rive({
+    src: "./Playgrounds/computer.riv", 
+    canvas: document.getElementById("hardware-model"),
+    autoplay: true,
+    stateMachines: "Website Sequence",
+    fit: rive.Fit.cover
+});
+
+
+
 
 

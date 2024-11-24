@@ -17,13 +17,13 @@
       <canvas id="loading-animation" width="500" height="400"></canvas>
     </div>
 
-    <canvas id="home-background"></canvas>
+    <canvas id="home-background" width="827" height="504"></canvas>
 
       <div id="bookmark-container">
         <div id="bookmark-logo"></div>
         <div id="bookmark-navigations">
-          <button onclick="renderScreen('Playground')" id="bookmark-lessons" class="bookmark-button">Playground</button>
-          <button onclick="renderScreen('Materials')" id="bookmark-lessons" class="bookmark-button">Materials</button>
+          <button onclick="renderScreen('Playground')" id="bookmark-lessons" class="bookmark-button">Playgrounds</button>
+          <!-- <button onclick="renderScreen('Materials')" id="bookmark-lessons" class="bookmark-button">Materials</button> -->
           <button onclick="renderScreen('Tests')" id="bookmark-glossary" class="bookmark-button">Tests</button>
           <button onclick="renderScreen('Dictionary')" id="bookmark-my-stats" class="bookmark-button">Dictionary</button>
           <button onclick="renderScreen('About Us')" id="bookmark-about-us" class="bookmark-button">About Us</button>
@@ -31,45 +31,317 @@
       </div>
 
     <div id="main-screen">
-
       <div class="screen" id="playground">
-        <p id="text">Cooking the last stage's website!</p>
-        <p id="text2">Stay tuned :D</p>
+        <div id="playground-selector-container">
+          <div class="playground-selector" id="eliza-selector" onclick="showPlayground('eliza')">
+            <img src="Assets/PlaygroundPics/Eliza.png" alt="ELIZA" class="playground-selector-img">
+            <span class="playground-selector-label">Chat with ELIZA (1966) - The first ever Chatbot</span>
+          </div>
+          <div class="playground-selector" id="altair-selector" onclick="showPlayground('altair-8800')">
+            <img src="Assets/PlaygroundPics/Altair 8800.png" alt="Altair 8800" class="playground-selector-img">
+            <span class="playground-selector-label">Try Altair 8800 (1975) - One of the first PCs ever made</span>
+          </div>
+          <div class="playground-selector" id="hardware-glossary-selector" onclick="showPlayground('hardware-model')">
+            <img src="Assets/PlaygroundPics/Computer Glossary.png" alt="Computer Glossary" class="playground-selector-img">
+            <span class="playground-selector-label">Check out our interactive computer hardware model</span>
+          </div>
+          <div class="playground-selector" id="rl-playground-selector" onclick="showPlayground('rl-playground')">
+            <img src="Assets/PlaygroundPics/RL Playground.png" alt="RL playground" class="playground-selector-img">
+            <span class="playground-selector-label">Learn about Reinforcement learning with the RL playground (link)</span>
+          </div>
+          <div class="playground-selector" id="wireshark-selector" onclick="showPlayground('wireshark')">
+            <img src="Assets/PlaygroundPics/Wireshark.png" alt="Altair 8800" class="playground-selector-img">
+            <span class="playground-selector-label">Learn about how data flows through the internet with Wireshark (Best paired with our study guide)</span>
+          </div>
+        </div>
+        <div id="playground-container">
+          <div id="playground-back-button" onclick="backPlayground()">^</div>
+          <div id="playground-notes-container">
+            <div id="playground-notes">
+              <p id="playground-notes-title">Notes</p>
+              <p id="playground-notes-body"></p>
+            </div>
+          </div>
+
+          <div id="playground-wrapper">
+            <canvas id="hardware-model" class="playground-session" width="1920" height="1080"></canvas>
+            <iframe id="altair-8800" class="playground-session" src="Playgrounds/8800-simulator/index.html" frameborder="0"></iframe>
+            <iframe id="eliza" class="playground-session" src="Playgrounds/eliza/eliza.html" frameborder="0"></iframe>
+          </div>
+
+        </div>
       </div>
-      <div class="screen" id="materials">
-        
-      </div>
-      <div class="screen" id="tests"></div>
-      <div class="screen" id="dictionary"></div>
-      <div id="about-us" class="screen">
-        <div id="about-us-file-container">
-          <div id="about-us-29-9" class="about-us-date-container">
-            <label class="about-us-file-date-title">29/09/2024</label>
-            <div class="about-us-file-button-container">
-              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Project Log.pdf')">
-                <p class="about-us-file-label">Project Log</p>
+      <!-- <div class="screen" id="materials">
+        <div id="our-goodies">
+          <div id="our-goodies-title-container" class="materials-title-container">
+            <p id="our-goodies-title" class="materials-title">Our Goodies</p>
+            <p id="our-goodies-subtitle" class="materials-subtitle">The materials that our team carefully made with love :D</p>
+          </div>
+          <div id="our-materials-container">
+            <div id="materials-study-guide" class="our-material">
+              <img src="" alt="study guide cover" class="our-material-img">
+              <div class="our-material-description">
+                <p class="our-material-description-title">Study Guide</p>
+                <p class="our-material-description-body">Our study guide is 100% hand-written with a lot of real life examples to explain all the basic concepts you need to know about the topic!</p>
               </div>
-              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Master To do list.pdf')">
-                <p class="about-us-file-label">Master To do list</p>
+            </div>
+            <div id="materials-ppts" class="our-material">
+              <img src="" alt="ppt cover" class="our-material-img">
+              <div class="our-material-description">
+                <p class="our-material-description-title">Powerpoints</p>
+                <p class="our-material-description-body">Don't like long texts? You can also check out our Powerpoints, which sums up everything in the study guide.</p>
               </div>
-              <div class="about-us-file-button" onclick="javascript:showfile('Data/About Us/Rough Plan.pdf')">
-                <p class="about-us-file-label">Rough Plan</p>
+            </div>
+            <div id="materials-videos" class="our-material">
+              <img src="" alt="video thumbnail" class="our-material-img">
+              <div class="our-material-description">
+                <p class="our-material-description-title">Videos</p>
+                <p class="our-material-description-body">You can also check out our videos, all of which are posted on the <a href="">MHz youtube channel</a>!</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="extra-goodies">
+          <div id="our-goodies-title-container" class="materials-title-container">
+            <p id="extra-goodies-title" class="materials-title">Extra Goodies & References</p>
+            <p id="extra-goodies-subtitle" class="materials-subtitle">Some extra materials (and references) for nerds who want to go deeper in the subject!</p>
+          </div>
+          <div id="extra-goodies-container">
+
+          </div>
+
+        </div>
+      </div> -->
+      <div class="screen" id="tests">
+        <div id="test-binding-picker">
+          <p id="test-binding-title">Select subjects to test!</p>
+
+          <div id="select-all-deselect-all-container">
+            <div id="select-all-button" onclick="selectEverything()">Select all</div>
+            <div id="deselect-all-button" onclick="deselectEverything()">Deselect all</div>
+          </div>
+          <div id="test-bindings-container">
+            <div class="test-chapter-binding" id="test-chapter-A-binding">
+              <p class="test-chapter-binding-label">INTRO TO AI</p>
+              <div class="test-lesson-binding-container">
+                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A1" onclick="toggleBinding('A1')">
+                  Early Days of AI
+                </div>
+                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A2" onclick="toggleBinding('A2')">
+                  Emergence of Modern AI
+                </div>
+                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A3" onclick="toggleBinding('A3')">
+                  Future of AI
+                </div>
+                <div class="select-deselect-container">
+                  <button class="select-all-button" onclick="selectAllBinding('A')">
+                    Select
+                  </button>
+                  <button class="deselect-all-button" onclick="deselectAllBinding('A')">
+                    Deselect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="test-chapter-binding" id="test-chapter-B-binding">
+              <p class="test-chapter-binding-label">BEHAVIORIST AI</p>
+              <div class="test-lesson-binding-container">
+                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B1" onclick="toggleBinding('B1')">
+                  Understanding<br>Behaviorist AI
+                </div>
+                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B2" onclick="toggleBinding('B2')">
+                  Reinforcement Learning
+                </div>
+                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B3" onclick="toggleBinding('B3')">
+                  Markov Decision Process
+                </div>
+                <div class="select-deselect-container">
+                  <button class="select-all-button" onclick="selectAllBinding('B')">
+                    Select
+                  </button>
+                  <button class="deselect-all-button" onclick="deselectAllBinding('B')">
+                    Deselect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="test-chapter-binding" id="test-chapter-C-binding">
+              <p class="test-chapter-binding-label">HARDWARE</p>
+              <div class="test-lesson-binding-container">
+                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C1"  onclick="toggleBinding('C1')">
+                  Number Systems
+                </div>
+                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C2"  onclick="toggleBinding('C2')">
+                  The Computer<br>Architecture
+                </div>
+                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C3"  onclick="toggleBinding('C3')">
+                  Program Execution
+                </div>
+                <div class="select-deselect-container">
+                  <button class="select-all-button" onclick="selectAllBinding('C')">
+                    Select
+                  </button>
+                  <button class="deselect-all-button" onclick="deselectAllBinding('C')">
+                    Deselect
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="test-chapter-binding" id="test-chapter-D-binding">
+              <p class="test-chapter-binding-label">NETWORKS</p>
+              <div class="test-lesson-binding-container">
+                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D1" onclick="toggleBinding('D1')">
+                  Network Devices
+                </div>
+                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D2" onclick="toggleBinding('D2')">
+                  Introduction to TCP/IP
+                </div>
+                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D3" onclick="toggleBinding('D3')">
+                  Data Flow
+                </div>
+                <div class="select-deselect-container">
+                  <button class="select-all-button" onclick="selectAllBinding('D')">
+                    Select
+                  </button>
+                  <button class="deselect-all-button" onclick="deselectAllBinding('D')">
+                    Deselect
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+          <p id="test-counter">
+            Selected 0/0 questions
+          </p>
+          <div id="test-start-button" onclick="startTest()">
+            START
+          </div>
+          <div id="test-percentage">
+            Around 0% of our test bank
+          </div>
         </div>
+        <div id="tests-container">
+          <div id="test-viewer-container">
+            
+          </div>
+          <div id="test-stats-container">
+            <div id="first-stat-column" class="stat-column">
+              <div class="stat-column-container">
+                <p id="stat-question-number" class="stat-number"></p>
+                <span class="stat-tooltip">Question Number</span>
+              </div>  
+              <div class="stat-column-container">
+                <p id="stat-total-question" class="stat-number"></p>
+                <span class="stat-tooltip">Total Questions</span>
+              </div>
+            </div>
+            <div class="stat-container" >
+              <p id="stat-progress" class="stat-number"></p>
+              <span class="stat-tooltip">Progress</span>
+            </div>
+            <div class="stat-container" id="stat-topic-container">
+              <p id="stat-topic" class="stat-number"></p>
+              <span class="stat-tooltip">The topic this question belongs to</span>
+            </div>
+            <div id="second-stat-column" class="stat-column">
+              <div class="stat-column-container">
+                <p id="stat-right-answers" class="stat-number"></p>
+                <span class="stat-tooltip">Correct Answers</span>
+              </div>
+              <div class="stat-column-container">
+                <p id="stat-wrong-answers" class="stat-number"></p>
+                <span class="stat-tooltip">Wrong Answers</span>
+              </div>
+            </div>
+            <div class="stat-container">
+              <p id="stat-accuracy" class="stat-number"></p>
+              <span class="stat-tooltip">Accuracy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen" id="dictionary">
+        <div id="dictionary-search-container">
+          <div id="dictionary-search-title-container">
+            <p id="dictionary-search-title">Search</p>
+            <i id="dictionary-search-icon" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input type="text" id="dictionary-search-bar" onchange="filterSearch()">
+          <div id="dictionary-search-filters">
+            <button class="search-filter-button hardware-dictionary" onclick="filterCategory('Hardware')">Hardware</button>
+            <button class="search-filter-button ai-dictionary" onclick="filterCategory('AI')">AI</button>
+            <button class="search-filter-button networks-dictionary" onclick="filterCategory('Networks')">Network</button>
+          </div>
+        </div>
+        <div id="dictionary-content-container">
+
+        </div>
+      </div>
+      <div id="about-us" class="screen">
         <div id="about-us-description-container">
           <img src="Assets/logo.svg" alt="logo" id="about-us-description-img">
           <p id="about-us-description-text">
           We, Team MHz, are the ones that decided that Moodle is not enough to teach people about AI sufficiently. <br><br>
           So yeah, here we are. We made our own website with our own graphics. Yay. <br><br>
-          This part of the page is to post stuffs like rough plans, logs, to do lists, you name it.
+          We hope that through our website, you guys can learn something new about Behaviorist AI, Hardware, and Networks. Good luck, and thank you for checking in on our website :D.
           </p>
         </div>
-        <div id="about-us-file-viewer">
-          <i class="fa-solid fa-circle-xmark" id="about-us-close-file-button" onclick="closefile()"></i>
-          <iframe id="about-us-file" src="" frameborder="0"></iframe>
+        <div id="about-us-members">
+          <p id="member-title">Meet our members</p>
+          <div id="about-us-members-container">
+            <div class="member-container" id="mango">
+            
+              <span class="member-info">
+                <b>Mango</b><br>
+                CEO<br>
+                Study Guide writer<br>
+                Interactive website developer
+              </span>
+            </div>
+            <div class="member-container" id="jade">
+  
+              <span class="member-info">
+                <b>Jade</b><br>
+                CIO<br>
+                Study Guide designer<br>
+                Researcher
+              </span>
+            </div>
+            <div class="member-container" id="tony">
+              
+              <span class="member-info">
+                <b>Tony</b><br>
+                Test bank + study guide's exercises and mind maps compiler
+              </span>
+            </div>
+            <div class="member-container" id="faiza">
+              
+              <span class="member-info">
+                <b>Faiza</b><br>
+                Powerpoint script writer + designer
+              </span>
+            </div>
+            <div class="member-container" id="darrel">
+              
+              <span class="member-info">
+                <b>Darrel</b><br>
+                Video editor<br>
+                Website UI/UX assistant
+              </span>
+            </div>
+            <div class="member-container" id="ryan">
+            
+              <span class="member-info">
+                <b>Ryan</b><br>
+                Video script writer<br>
+                Researcher
+              </span>
+            </div>
+          </div>
         </div>
+
       </div>
 
     <script src="Scripts/loadRiveAssets.js"></script>
