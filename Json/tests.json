@@ -17955,7 +17955,7 @@
      },
      {
       "Question": "SQL is a natural language.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Programming Languages"
@@ -18011,7 +18011,7 @@
      },
      {
       "Question": "In OOP, a class can inherit properties and methods from multiple parent classes.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Software Engineering"
@@ -18909,7 +18909,7 @@
      },
      {
       "Question": "The maintenance phase of software engineering involves fixing bugs post-release.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Software Engineering"
