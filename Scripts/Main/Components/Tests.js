@@ -239,6 +239,7 @@ const answerQuestion = (givenAnswer) => {
     }
     document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
     document.getElementById("streak-number").textContent = correctStreak
+    document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
     if (testBank[currentQuestionNumber]["Type"] === "multiple-choice") {
         ["A","B","C","D"].forEach(answer => {
             if (answer === correctAnswer) {
