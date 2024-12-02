@@ -15,7 +15,7 @@
     left: 10%;
     background-color: white;
     background-repeat: no-repeat;
-    background-image:url(../Assets/logo.svg);
+    background-image:url(/Assets/logo.svg);
     background-size: cover;
     background-position: center;
 }

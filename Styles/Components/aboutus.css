@@ -10,6 +10,7 @@
     align-items: center;
     max-height: calc(100vh - 50px);
     height: 100%;
+
 }
 
 #about-us-description-container {
@@ -24,6 +25,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
 #about-us-description-text::-webkit-scrollbar {
@@ -62,29 +64,29 @@
 }
 
 #mango {
-    background-image: url(../Assets/MemberPics/Mango.jpg);
+    background-image: url(/Assets/MemberPics/Mango.jpg);
     background-position: center;
 }
 
 #jade {
-    background-image: url(../Assets/MemberPics/Jade.jpg);
+    background-image: url(/Assets/MemberPics/Jade.jpg);
     background-position: top;
 }
 #tony {
-    background-image: url(../Assets/MemberPics/Tony.jpg);
+    background-image: url(/Assets/MemberPics/Tony.jpg);
     
 }
 #faiza {
-    background-image: url(../Assets/MemberPics/Faiza.jpg);
+    background-image: url(/Assets/MemberPics/Faiza.jpg);
     background-position: center;
 }
 #ryan {
-    background-image: url(../Assets/MemberPics/Ryan.jpg);
+    background-image: url(/Assets/MemberPics/Ryan.jpg);
     background-position: center;
 }
 
 #darrel {
-    background-image: url(../Assets/MemberPics/Darrel.jpg);
+    background-image: url(/Assets/MemberPics/Darrel.jpg);
     background-position: top 10px;
 }
 

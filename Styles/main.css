@@ -1,23 +1,13 @@
-@import url(bookmark.css);
-@import url(aboutus.css);
-@import url(playground.css);
-@import url(dictionary.css);
-@import url(tests.css);
+@import url(Components/aboutus.css);
+@import url(Components/bookmark.css);
+@import url(Components/dictionary.css);
+@import url(Components/playground.css);
+@import url(Components/tests.css);
 
 * {
     margin: 0;
     padding: 0;
     font-family: "Fredoka", sans-serif;
-}
-
-
-:root {
-    --network-bg: lightgreen;
-    --network-border: green;
-    --behavioral-ai-bg: lightblue;
-    --behavioral-ai-border: dodgerblue  ;
-    --hardware-bg: lightsalmon;
-    --hardware-border: red;
 }
 
 body {

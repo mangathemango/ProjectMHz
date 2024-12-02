@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectMHZ</title>
-    <script src="Scripts/rive.js"></script>
+    <script src="Scripts/Rive/rive.js"></script>
     <link rel="stylesheet" href="Styles/main.css">
     <link rel="icon" href="Assets/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,148 +116,63 @@
       </div> -->
       <div class="screen" id="tests">
         <div id="test-binding-picker">
-          <p id="test-binding-title">Select subjects to test!</p>
+          <div id="test-packs-container">
+          </div>
+          <div id="test-right-side-container">
+            <div id="test-pool-container">
+              <p id="test-pool-text">Test Pool</p>
+              <p id="test-pool-question-number">0 Questions</p>
+            </div>
+            <div id="test-amount-container">
+              <div id="test-amount-display">
+                <p id="test-amount-text">
+                  Test amount: 
+                </p>
+                <input type="number" id="test-amount-text-input" value="0">
+              </div>
+              <input id="test-amount-scroll" type="range" min="0" max="0" value="0"></input>
+              <p id="test-time">Takes around 0 seconds</p>
+            </div>
+            <div id="test-start-button" onclick="startTest()">
+              START
+            </div>
+          </div>
 
-          <div id="select-all-deselect-all-container">
-            <div id="select-all-button" onclick="selectEverything()">Select all</div>
-            <div id="deselect-all-button" onclick="deselectEverything()">Deselect all</div>
-          </div>
-          <div id="test-bindings-container">
-            <div class="test-chapter-binding" id="test-chapter-A-binding">
-              <p class="test-chapter-binding-label">INTRO TO AI</p>
-              <div class="test-lesson-binding-container">
-                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A1" onclick="toggleBinding('A1')">
-                  Early Days of AI
-                </div>
-                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A2" onclick="toggleBinding('A2')">
-                  Emergence of Modern AI
-                </div>
-                <div class="test-lesson-binding chapter-A-binding deselected-binding" id="A3" onclick="toggleBinding('A3')">
-                  Future of AI
-                </div>
-                <div class="select-deselect-container">
-                  <button class="select-all-button" onclick="selectAllBinding('A')">
-                    Select
-                  </button>
-                  <button class="deselect-all-button" onclick="deselectAllBinding('A')">
-                    Deselect
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="test-chapter-binding" id="test-chapter-B-binding">
-              <p class="test-chapter-binding-label">BEHAVIORIST AI</p>
-              <div class="test-lesson-binding-container">
-                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B1" onclick="toggleBinding('B1')">
-                  Understanding<br>Behaviorist AI
-                </div>
-                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B2" onclick="toggleBinding('B2')">
-                  Reinforcement Learning
-                </div>
-                <div class="test-lesson-binding chapter-B-binding deselected-binding" id="B3" onclick="toggleBinding('B3')">
-                  Markov Decision Process
-                </div>
-                <div class="select-deselect-container">
-                  <button class="select-all-button" onclick="selectAllBinding('B')">
-                    Select
-                  </button>
-                  <button class="deselect-all-button" onclick="deselectAllBinding('B')">
-                    Deselect
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="test-chapter-binding" id="test-chapter-C-binding">
-              <p class="test-chapter-binding-label">HARDWARE</p>
-              <div class="test-lesson-binding-container">
-                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C1"  onclick="toggleBinding('C1')">
-                  Number Systems
-                </div>
-                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C2"  onclick="toggleBinding('C2')">
-                  The Computer<br>Architecture
-                </div>
-                <div class="test-lesson-binding chapter-C-binding deselected-binding" id="C3"  onclick="toggleBinding('C3')">
-                  Program Execution
-                </div>
-                <div class="select-deselect-container">
-                  <button class="select-all-button" onclick="selectAllBinding('C')">
-                    Select
-                  </button>
-                  <button class="deselect-all-button" onclick="deselectAllBinding('C')">
-                    Deselect
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="test-chapter-binding" id="test-chapter-D-binding">
-              <p class="test-chapter-binding-label">NETWORKS</p>
-              <div class="test-lesson-binding-container">
-                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D1" onclick="toggleBinding('D1')">
-                  Network Devices
-                </div>
-                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D2" onclick="toggleBinding('D2')">
-                  Introduction to TCP/IP
-                </div>
-                <div class="test-lesson-binding chapter-D-binding deselected-binding" id="D3" onclick="toggleBinding('D3')">
-                  Data Flow
-                </div>
-                <div class="select-deselect-container">
-                  <button class="select-all-button" onclick="selectAllBinding('D')">
-                    Select
-                  </button>
-                  <button class="deselect-all-button" onclick="deselectAllBinding('D')">
-                    Deselect
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p id="test-counter">
-            Selected 0/0 questions
-          </p>
-          <div id="test-start-button" onclick="startTest()">
-            START
-          </div>
-          <div id="test-percentage">
-            Around 0% of our test bank
-          </div>
+
         </div>
         <div id="tests-container">
+
           <div id="test-viewer-container">
-            
+
           </div>
+          <i class="test-navigation-button fa-solid fa-caret-left" id="test-nav-back" onclick="moveBack()"></i>
+          <i class="test-navigation-button fa-solid fa-caret-right" id="test-nav-forward" onclick="moveForward()"></i>  
+          <i class="fa-solid fa-house" id="test-home-button" onclick="retrytest()"></i>
           <div id="test-stats-container">
             <div id="first-stat-column" class="stat-column">
-              <div class="stat-column-container">
+              <div class="stat-column-container" title="Current Question Number">
                 <p id="stat-question-number" class="stat-number"></p>
-                <span class="stat-tooltip">Question Number</span>
               </div>  
-              <div class="stat-column-container">
-                <p id="stat-total-question" class="stat-number"></p>
-                <span class="stat-tooltip">Total Questions</span>
+              <div class="stat-column-container" title="Total Questions">
+                <p id="stat-total-question" class="stat-number" ></p>
               </div>
             </div>
-            <div class="stat-container" >
-              <p id="stat-progress" class="stat-number"></p>
-              <span class="stat-tooltip">Progress</span>
+            <div class="stat-container" title="Progress">
+              <p id="stat-progress" class="stat-number" ></p>
             </div>
-            <div class="stat-container" id="stat-topic-container">
+            <div class="stat-container" id="stat-topic-container" title="The team + The topic this question belongs to">
               <p id="stat-topic" class="stat-number"></p>
-              <span class="stat-tooltip">The topic this question belongs to</span>
             </div>
             <div id="second-stat-column" class="stat-column">
-              <div class="stat-column-container">
+              <div class="stat-column-container" title="Correct Answers">
                 <p id="stat-right-answers" class="stat-number"></p>
-                <span class="stat-tooltip">Correct Answers</span>
               </div>
-              <div class="stat-column-container">
+              <div class="stat-column-container" title="Wrong Answers">
                 <p id="stat-wrong-answers" class="stat-number"></p>
-                <span class="stat-tooltip">Wrong Answers</span>
               </div>
             </div>
-            <div class="stat-container">
+            <div class="stat-container" title="Accuracy">
               <p id="stat-accuracy" class="stat-number"></p>
-              <span class="stat-tooltip">Accuracy</span>
             </div>
           </div>
         </div>
@@ -344,7 +259,10 @@
 
       </div>
 
-    <script src="Scripts/loadRiveAssets.js"></script>
-    <script src="Scripts/script.js"></script>
+    <script src="Scripts/Rive/loadRiveAssets.js"></script>
+    
+    <script src="Scripts/Main/main.js"></script>
+    <script src="Scripts/Main/Components/Dictionary.js"></script>
+    <script src="Scripts/Main/Components/Tests.js"></script>
 </body>
 </html>
