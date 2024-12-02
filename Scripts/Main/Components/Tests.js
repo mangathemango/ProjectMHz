@@ -121,6 +121,9 @@ const startTest = () => {
     correctStreak = 0
     currentQuestionNumber = 0
     numCorrectAnswers = 0
+    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
+    document.getElementById("streak-number").textContent = correctStreak
+    document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
     document.getElementById("test-viewer-container").innerHTML = ""
     moveToQuestion(0)
     updateTestStats()
@@ -378,4 +381,4 @@ setInterval(() => {
     } else {
         document.getElementById("test-streak-viewer").style.transform = `translateX(-50%)`
     }
-}, 10);
+}, 1);
