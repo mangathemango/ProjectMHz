@@ -20,10 +20,11 @@
     <canvas id="home-background" width="827" height="504"></canvas>
 
       <div id="bookmark-container">
-        <div id="bookmark-logo"></div>
+        <div id="bookmark-logo-container">
+          <img id="bookmark-logo" src="Assets/logo.svg" alt="logo"></img>
+        </div>
         <div id="bookmark-navigations">
           <button onclick="renderScreen('Playground')" id="bookmark-lessons" class="bookmark-button">Playgrounds</button>
-          <!-- <button onclick="renderScreen('Materials')" id="bookmark-lessons" class="bookmark-button">Materials</button> -->
           <button onclick="renderScreen('Tests')" id="bookmark-glossary" class="bookmark-button">Tests</button>
           <button onclick="renderScreen('Dictionary')" id="bookmark-my-stats" class="bookmark-button">Dictionary</button>
           <button onclick="renderScreen('About Us')" id="bookmark-about-us" class="bookmark-button">About Us</button>
@@ -71,49 +72,6 @@
 
         </div>
       </div>
-      <!-- <div class="screen" id="materials">
-        <div id="our-goodies">
-          <div id="our-goodies-title-container" class="materials-title-container">
-            <p id="our-goodies-title" class="materials-title">Our Goodies</p>
-            <p id="our-goodies-subtitle" class="materials-subtitle">The materials that our team carefully made with love :D</p>
-          </div>
-          <div id="our-materials-container">
-            <div id="materials-study-guide" class="our-material">
-              <img src="" alt="study guide cover" class="our-material-img">
-              <div class="our-material-description">
-                <p class="our-material-description-title">Study Guide</p>
-                <p class="our-material-description-body">Our study guide is 100% hand-written with a lot of real life examples to explain all the basic concepts you need to know about the topic!</p>
-              </div>
-            </div>
-            <div id="materials-ppts" class="our-material">
-              <img src="" alt="ppt cover" class="our-material-img">
-              <div class="our-material-description">
-                <p class="our-material-description-title">Powerpoints</p>
-                <p class="our-material-description-body">Don't like long texts? You can also check out our Powerpoints, which sums up everything in the study guide.</p>
-              </div>
-            </div>
-            <div id="materials-videos" class="our-material">
-              <img src="" alt="video thumbnail" class="our-material-img">
-              <div class="our-material-description">
-                <p class="our-material-description-title">Videos</p>
-                <p class="our-material-description-body">You can also check out our videos, all of which are posted on the <a href="">MHz youtube channel</a>!</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div id="extra-goodies">
-          <div id="our-goodies-title-container" class="materials-title-container">
-            <p id="extra-goodies-title" class="materials-title">Extra Goodies & References</p>
-            <p id="extra-goodies-subtitle" class="materials-subtitle">Some extra materials (and references) for nerds who want to go deeper in the subject!</p>
-          </div>
-          <div id="extra-goodies-container">
-
-          </div>
-
-        </div>
-      </div> -->
       <div class="screen" id="tests">
         <div id="test-binding-picker">
           <div id="test-packs-container">
