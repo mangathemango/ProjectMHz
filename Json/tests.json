@@ -7182,7 +7182,7 @@
       "B": "The speed at which a network processes requests",
       "C": "The amount of traffic a network can handle while maintaining performance",
       "D": "The physical size of a network device",
-      "Answer": "C​",
+      "Answer": "C",
       "Team": "Technova",
       "Module": "Network",
       "Topic": "Chapter 4"
@@ -7556,7 +7556,7 @@
       "B": "Monitoring user activity and identifying suspicious behavior",
       "C": "Storing large amounts of encrypted data",
       "D": "Predicting hardware failures",
-      "Answer": "B​",
+      "Answer": "B",
       "Team": "Technova",
       "Module": "Behaviorist AI",
       "Topic": "Chapter 6"
@@ -11011,12 +11011,12 @@
       "Topic": "System and Application Software"
      },
      {
-      "Question": "Antivirus software falls under which category?",
+      "Question": "Antivirus software doesn't fall under which category?",
       "A": "System software",
       "B": "Application software",
       "C": "Utility software",
       "D": "Device driver",
-      "Answer": "C",
+      "Answer": "D",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -11071,7 +11071,7 @@
       "B": "Application software",
       "C": "Gaming software",
       "D": "Database software",
-      "Answer": "C",
+      "Answer": "A",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -11093,7 +11093,7 @@
       "B": "Backup software",
       "C": "Word processor",
       "D": "Web browser",
-      "Answer": "C",
+      "Answer": "B",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -11148,7 +11148,7 @@
       "B": "Device drivers",
       "C": "Operating system",
       "D": "Antivirus software",
-      "Answer": "B",
+      "Answer": "C",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -13719,7 +13719,7 @@
      },
      {
       "Question": "Big Data is typically measured in terabytes. ",
-      "Answer": false,
+      "Answer": true,
       "Team": "Low Tech",
       "Module": "Big Data",
       "Topic": "Introduction"
@@ -16589,7 +16589,7 @@
      },
      {
       "Question": "Machine learning models are examples of symbolic AI.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
@@ -16619,7 +16619,7 @@
      },
      {
       "Question": "Symbolic AI is best suited for tasks requiring large amounts of data to learn.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
@@ -18545,7 +18545,7 @@
      },
      {
       "Question": "Application software cannot run without system software.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -18804,7 +18804,7 @@
      },
      {
       "Question": "Assembly language uses mnemonics.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Programming Languages"

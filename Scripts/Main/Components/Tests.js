@@ -108,15 +108,17 @@ const updateTestTime = () => {
     document.getElementById("test-time").innerHTML = timeText
 }
 
+let correctStreak = 0
 const startTest = () => {
     let totalQuestions = document.getElementById("test-amount-text-input").value;
     testBank = testBank.filter(element => testBank.indexOf(element) < totalQuestions)
-    testBank = shuffle(testBank)
     if (!testBank[0]) {
         alert("Select at least 1 subject")
         return
     }
+    testBank = shuffle(testBank)
     document.getElementById("tests").style.transform = "translateY(-50%)"
+    correctStreak = 0
     currentQuestionNumber = 0
     numCorrectAnswers = 0
     document.getElementById("test-viewer-container").innerHTML = ""
@@ -229,10 +231,14 @@ const answerQuestion = (givenAnswer) => {
     if (givenAnswer == correctAnswer) {
         console.log("Result: Correct")
         numCorrectAnswers ++
+        correctStreak ++
+        console.log("Streak: " + correctStreak)
     } else {
         console.log("Result: Wrong")
+        correctStreak = 0
     }
-
+    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
+    document.getElementById("streak-number").textContent = correctStreak
     if (testBank[currentQuestionNumber]["Type"] === "multiple-choice") {
         ["A","B","C","D"].forEach(answer => {
             if (answer === correctAnswer) {
@@ -324,12 +330,17 @@ const updateTestStats = () => {
     document.getElementById("stat-topic").innerHTML = topic
 }
 
+const continuetest = () => {
+    document.getElementById("tests").style.transform = "translateY(-50%)"
+}
+
 const retrytest = () => {
     document.getElementById("tests").style.transform = "translateY(0)"
 }
 
 
 document.addEventListener("keydown", (event) => {
+    console.log(event.key)
     if (event.key == "ArrowRight") {
         moveForward()
     }
@@ -352,7 +363,18 @@ document.addEventListener("keydown", (event) => {
         answerQuestion("D")
         answerQuestion(false)
     }
-    if (event.key == "h") {
+    if (event.key == "Escape") {
         retrytest()
     }
 })
+
+let shakeStrength = 5;
+setInterval(() => {
+    if (correctStreak > 10) {
+        let shiftAmmountX = Math.random()*shakeStrength - shakeStrength / 2
+        let shiftAmmountY = Math.random()*shakeStrength - shakeStrength / 2
+        document.getElementById("test-streak-viewer").style.transform = `translateX(calc(-50% + ${shiftAmmountX}px)) translateY(${shiftAmmountY}px)`
+    } else {
+        document.getElementById("test-streak-viewer").style.transform = `translateX(-50%)`
+    }
+}, 10);
