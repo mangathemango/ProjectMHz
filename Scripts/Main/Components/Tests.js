@@ -128,13 +128,9 @@ const startTest = () => {
     moveToQuestion(0)
     updateTestStats()
     renderQuestion(0)
-    renderQuestion(1)
-    renderQuestion(2)
-    renderQuestion(3)
 }
 
 const renderQuestion = (questionNumber) => {
-    let question
     if (questionNumber > testBank.length) {
         return
     } else if (questionNumber === testBank.length) {
@@ -147,39 +143,67 @@ const renderQuestion = (questionNumber) => {
             </div>
         `)
         return
-    } else {      
-        question = testBank[questionNumber]
-    }
-    let answers = []
-    if (question["Type"] === "multiple-choice") {
-        answers = [
-            `<button class="answer-A answer" onclick="answerQuestion('A')">${question["A"]}</button>`,
-            `<button class="answer-B answer" onclick="answerQuestion('B')">${question["B"]}</button>`,
-            `${question["C"]? `<button class="answer-C answer" onclick="answerQuestion('C')">${question["C"]}</button>`: ""}`,
-            `${question["D"]? `<button class="answer-D answer" onclick="answerQuestion('D')">${question["D"]}</button>`: ""}`,
-        ]
-    } else if (question["Type"] === "true-false") {
-        answers = [
-            '<button class="answer-true answer" onclick="answerQuestion(true)">True</button>',
-            '<button class="answer-false answer" onclick="answerQuestion(false)">False</button>'
-        ]
-    }
-    answers = answers.toString()
-    while (answers.includes(",")) {
-        answers = answers.replace(",","")
     }
 
-    document.getElementById("test-viewer-container").insertAdjacentHTML("beforeend", `
-        <div class="test-container">
-          <div class="question-container">
-            <p class="question-text">${question["Question"]}</p>
-          </div>
-          <div class="answers-container ${question["Type"]}" id="question-${questionNumber}">
-            ${answers}
-          </div>
-        </div>
-    `)
+    let questionData = testBank[questionNumber]
+    let answers = ""
+    if (questionData["Type"] === "multiple-choice") {
+        ["A","B","C","D"].forEach(letter => {
+            if (!questionData[letter]) {return}
+            let answerJudgement = ""
+            if (questionData["Answered"]) {
+                if (letter == questionData["Answer"]) {
+                    answerJudgement = "right-answer"
+                }
+                if (letter == questionData["Given Answer"] && questionData["Given Answer"] != questionData["Answer"]) {
+                    answerJudgement = "wrong-answer"
+                }
+            }
+            answers += `<button class="answer-${letter} ${answerJudgement} answer" onclick="answerQuestion('${letter}')">${questionData[letter]}</button>`
+        })
+        
+
+    } else if (questionData["Type"] === "true-false") {
+        [true,false].forEach(boolean => {
+            let answerJudgement = ""
+            if (questionData["Answered"]) {
+                if (boolean === questionData["Answer"]) {
+                    answerJudgement = "right-answer"
+                }
+                if (boolean === questionData["Given Answer"] && questionData["Given Answer"] != questionData["Answer"]) {
+                    answerJudgement = "wrong-answer"
+                }
+            }
+            answers += `<button class="answer-${boolean} ${answerJudgement} answer" onclick="answerQuestion(${boolean})">${boolean? "True" : "False"}</button>`
+        })
+    }
+    if (!document.getElementById(`question-${questionNumber}`)) {
+        document.getElementById("test-viewer-container").insertAdjacentHTML("beforeend", `
+            <div class="test-container" id="question-${questionNumber}">
+              <div class="question-container">
+                <p class="question-text">${questionData["Question"]}</p>
+              </div>
+              <div class="answers-container ${questionData["Type"]}">
+                ${answers}
+              </div>
+            </div>
+        `)
+    } else if (document.getElementById(`question-${questionNumber}`).innerHTML == "") {
+        document.getElementById(`question-${questionNumber}`).innerHTML = `
+            <div class="question-container">
+                <p class="question-text">${questionData["Question"]}</p>
+            </div>
+            <div class="answers-container ${questionData["Type"]}">
+                ${answers}
+            </div>
+        `
+    }
 }
+
+const unrenderQuestion = (questionNumber) => {
+    document.getElementById(`question-${questionNumber}`).innerHTML = ""
+}
+
 
 let viewedQuestionNumber = 0
 let questionAnswered = false
@@ -197,8 +221,15 @@ const moveToQuestion = (questionNumber) => {
     } else {
         document.getElementById("test-nav-forward").style.scale = "1"
         viewingPreviousQuestion = true
+    } 
+    for (i = 0; i <= questionNumber + 20; i++) {
+        if (i <= questionNumber - 20) {
+            unrenderQuestion(i)
+            continue;
+        }
+        renderQuestion(i)
     }
-    document.getElementById("test-viewer-container").style.transform = `translateX(${-0.5*questionNumber}%)`
+    document.getElementById("test-viewer-container").style.transform = `translateX(-${questionNumber/30}%)`
     updateTestStats()
 }
 
@@ -208,6 +239,7 @@ const moveBack = () => {
     } 
     viewedQuestionNumber --;
     moveToQuestion(viewedQuestionNumber)
+
 }
 
 const moveForward = () => {
@@ -227,17 +259,14 @@ const answerQuestion = (givenAnswer) => {
     if (typeof(givenAnswer) != typeof(correctAnswer)) {
         return
     }
-    console.log("Answer given: " + givenAnswer)
-    console.log("Question Data: ") 
-    console.log(testBank[currentQuestionNumber])
+
+    testBank[currentQuestionNumber]["Given Answer"] = givenAnswer
+    testBank[currentQuestionNumber]["Answered"] = true
     questionAnswered = true
     if (givenAnswer == correctAnswer) {
-        console.log("Result: Correct")
         numCorrectAnswers ++
         correctStreak ++
-        console.log("Streak: " + correctStreak)
     } else {
-        console.log("Result: Wrong")
         correctStreak = 0
     }
     document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
@@ -271,11 +300,14 @@ const answerQuestion = (givenAnswer) => {
 }
 
 const nextQuestion = () => {
+    let lastQuestionNumber = currentQuestionNumber
     currentQuestionNumber ++
     updateTestStats()
     moveToQuestion(currentQuestionNumber)
-    renderQuestion(currentQuestionNumber+3)
+    renderQuestion(currentQuestionNumber)
 }
+
+
 
 const shuffle = (array) => { 
     for (let i = array.length - 1; i > 0; i--) { 
@@ -287,7 +319,10 @@ const shuffle = (array) => {
 
 const compileTestBank = () => {
     testBank = testData.filter(question => selectedPacks.includes(question["Module"]))
-
+    testBank = testBank.map(question => {
+        question["Answered"] = false;
+        return question
+    })
     testBank = shuffle(testBank)
 }
 

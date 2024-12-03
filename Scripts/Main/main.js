@@ -69,7 +69,9 @@ const backPlayground = () => {
     document.getElementById("playground").style.transform = "translateY(0%)"
 }
 
-
-
+const disableRive = () => {
+    document.getElementById("home-background").remove()
+    document.getElementById("hardware-model").remove()
+}
 
 

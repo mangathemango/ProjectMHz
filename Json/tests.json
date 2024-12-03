@@ -16420,7 +16420,7 @@
       "Topic": "Chapter 3"
      },
      {
-      "Question": "In the MARIE architecture, the Program Counter (Pholds the data currently being processed.",
+      "Question": "In the MARIE architecture, the Program Counter (PC) holds the data currently being processed.",
       "Answer": false,
       "Team": "Technova",
       "Module": "Hardware",
@@ -16483,7 +16483,7 @@
       "Topic": "Chapter 3"
      },
      {
-      "Question": "The \"store\" instruction in MARIE writes data from the Accumulator (Ato memory.",
+      "Question": "The \"store\" instruction in MARIE writes data from the Accumulator (AC) to memory.",
       "Answer": true,
       "Team": "Technova",
       "Module": "Hardware",
