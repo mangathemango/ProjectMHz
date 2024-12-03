@@ -381,25 +381,6 @@ const retrytest = () => {
     document.getElementById("tests").style.transform = "translateY(0)"
 }
 
-const showIncorrectQuestions = () => {
-    let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"])
-    incorrectQuestions.forEach(question => {
-            console.log("")
-            console.log(`(${question["Team"]} - ${question["Module"]})`)
-            console.log(`(Question) ${question["Question"]}`)
-        if (question["Type"] === "multiple-choice") {
-            console.log(`(Correct Answer) ${question[question["Answer"]]}`)
-            console.log(`(Given Answer) ${question[question["Given Answer"]]}`)
-        } else {
-            console.log(`(Correct Answer) ${question["Answer"]}`)
-        }
-
-        console.log("")
-    })
-    console.log("")
-    console.log("NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.")
-}
-
 const saveIncorrectQuestions = () => {
     let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"]);
     console.log(incorrectQuestions)
