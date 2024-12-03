@@ -2320,17 +2320,6 @@
       "Topic": "Introduction"
      },
      {
-      "Question": "Why are traditional data tools not equipped to handle Big Data?",
-      "A": "They are too expensive",
-      "B": "They lack the capacity for real-time analysis",
-      "C": "They can't handle unstructured data",
-      "D": "Both B and C",
-      "Answer": "D",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Introduction"
-     },
-     {
       "Question": "Which of the following is an example of semi-structured data?",
       "A": "JSON",
       "B": "Financial transactions",
@@ -2353,17 +2342,6 @@
       "Topic": "Introduction"
      },
      {
-      "Question": "In Big Data analytics, what is the last step in the data lifecycle?",
-      "A": "Storage",
-      "B": "Integration",
-      "C": "Management",
-      "D": "Analysis",
-      "Answer": "D",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Introduction"
-     },
-     {
       "Question": "What kind of analysis can Big Data provide?",
       "A": "Predictive only",
       "B": "Historical only",
@@ -2373,17 +2351,6 @@
       "Team": "Low Tech",
       "Module": "Big Data",
       "Topic": "Introduction"
-     },
-     {
-      "Question": "Which of the following is a key feature of Operational Big Data?",
-      "A": "Batch processing",
-      "B": "Low latency requirements",
-      "C": "Historical data analysis",
-      "D": "Predictive modeling",
-      "Answer": "B",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
      },
      {
       "Question": "Which technology is primarily used for data visualization?",
@@ -2414,17 +2381,6 @@
       "C": "Apache Kafka",
       "D": "DynamoDB",
       "Answer": "B",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
-      "Question": "What is the primary function of data visualization tools?",
-      "A": "Perform predictive analytics",
-      "B": "Extract hidden patterns",
-      "C": "Present insights using charts and dashboards ",
-      "D": "Store unstructured data",
-      "Answer": "C",
       "Team": "Low Tech",
       "Module": "Big Data",
       "Topic": "Technologies"
@@ -2529,17 +2485,6 @@
       "Topic": "Data Processing and Analytics"
      },
      {
-      "Question": "What is the primary goal of prescriptive analytics?",
-      "A": "Predict future outcomes",
-      "B": "Understand past events",
-      "C": "Provide actionable recommendations",
-      "D": "Summarize historical data",
-      "Answer": "C",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Data Processing and Analytics"
-     },
-     {
       "Question": "What does data cleaning involve?",
       "A": "Visualizing data through graphs and charts",
       "B": "Removing errors, inconsistencies, and duplicates in the data",
@@ -2562,33 +2507,11 @@
       "Topic": "Data Analysis and Visualization"
      },
      {
-      "Question": "What type of data is commonly unstructured?",
-      "A": "Sales data in a spreadsheet",
-      "B": "Financial transaction logs",
-      "C": "Social media posts and video files",
-      "D": "Customer records in a database",
-      "Answer": "C",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Data Analysis and Visualization"
-     },
-     {
       "Question": "Which method is used to handle missing data in a dataset?",
       "A": "Data augmentation",
       "B": "Data imputation",
       "C": "Data cleaning",
       "D": "Data clustering",
-      "Answer": "B",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Data Analysis and Visualization"
-     },
-     {
-      "Question": "What is the primary purpose of heat maps in data visualization?",
-      "A": "To show trends over time",
-      "B": "To visualize the intensity or density of data in a specific area",
-      "C": "To compare multiple variables",
-      "D": "To highlight outliers in the dataset",
       "Answer": "B",
       "Team": "Low Tech",
       "Module": "Big Data",
@@ -2612,17 +2535,6 @@
       "C": "Using customer behavior analysis to personalize marketing strategies",
       "D": "Fraud detection in banking",
       "Answer": "C",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Use Cases"
-     },
-     {
-      "Question": "Big Data in finance helps companies detect fraud by:",
-      "A": "Using manual transaction analysis",
-      "B": "Implementing real-time transaction monitoring with advanced algorithms",
-      "C": "Reducing the number of employees in fraud departments",
-      "D": "Storing historical financial records only",
-      "Answer": "B",
       "Team": "Low Tech",
       "Module": "Big Data",
       "Topic": "Use Cases"
@@ -2831,17 +2743,6 @@
       "B": "Informed consent",
       "C": "Data encryption",
       "D": "Data profiling",
-      "Answer": "B",
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Ethics and Privacy"
-     },
-     {
-      "Question": "What can help prevent unauthorized access to sensitive data in Big Data systems?",
-      "A": "Data validation",
-      "B": "Strict access control",
-      "C": "Increased scalability",
-      "D": "Real-time processing",
       "Answer": "B",
       "Team": "Low Tech",
       "Module": "Big Data",
@@ -3999,26 +3900,6 @@
       "Module": "Connectionist AI"
      },
      {
-      "Question": "What is a key component of Connectionist AI models?",
-      "A": "Logical operators.",
-      "B": "Neurons and connections.",
-      "C": "Mathematical equations.",
-      "D": "Programming languages.",
-      "Answer": "B",
-      "Team": "Stargazer",
-      "Module": "Connectionist AI"
-     },
-     {
-      "Question": "Connectionist AI is particularly good at handling which type of problems?",
-      "A": "Problems with clear rules and steps.",
-      "B": "Problems that require creative solutions.",
-      "C": "Problems that have a single correct answer.",
-      "D": "Problems with a limited number of variables.",
-      "Answer": "B",
-      "Team": "Stargazer",
-      "Module": "Connectionist AI"
-     },
-     {
       "Question": "How many transmission status does LTEMs have?",
       "A": 1,
       "B": 2,
@@ -4794,7 +4675,7 @@
       "B": "Input, Storage, Processing, Display",
       "C": "Input, Process, Output, Storage",
       "D": "Input, Process, Analysis, Output",
-      "Answer": "B",
+      "Answer": "C",
       "Team": "dwarf",
       "Module": "Hardware"
      },
@@ -5934,17 +5815,6 @@
       "Topic": "Early History"
      },
      {
-      "Question": "Which of the following would be a complex scenario for AI in probabilistic reasoning?",
-      "A": "Predicting the outcome of a simple coin toss",
-      "B": "Calculating the probability of falling given known factors",
-      "C": "Processing multiple possible responses to a middle school kid's confession",
-      "D": "Finding a route with the shortest distance",
-      "Answer": "C",
-      "Team": "Team MHZ",
-      "Module": "AI Overview",
-      "Topic": "Early History"
-     },
-     {
       "Question": "Who is considered the creator of the Turing Test?",
       "A": "John McCarthy",
       "B": "Warren McCulloch",
@@ -5962,17 +5832,6 @@
       "C": "To predict emotions with high accuracy",
       "D": "To optimize machine learning algorithms",
       "Answer": "B",
-      "Team": "Team MHZ",
-      "Module": "AI Overview",
-      "Topic": "Modern AI"
-     },
-     {
-      "Question": "Which of the following would be a complex scenario for AI in probabilistic reasoning?",
-      "A": "Predicting the outcome of a simple coin toss",
-      "B": "Calculating the probability of falling given known factors",
-      "C": "Processing multiple possible responses to a middle school kid's confession",
-      "D": "Finding a route with the shortest distance",
-      "Answer": "C",
       "Team": "Team MHZ",
       "Module": "AI Overview",
       "Topic": "Modern AI"
@@ -13774,13 +13633,6 @@
       "Topic": "Introduction"
      },
      {
-      "Question": "Distributed systems are needed to manage Big Data because of its scale and complexity. ",
-      "Answer": true,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Introduction"
-     },
-     {
       "Question": "Big Data is only useful in the tech industry. ",
       "Answer": false,
       "Team": "Low Tech",
@@ -13858,13 +13710,6 @@
       "Topic": "Introduction"
      },
      {
-      "Question": "Big Data technologies can only handle structured data. ",
-      "Answer": false,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
       "Question": "Apache Kafka is a real-time data streaming platform. ",
       "Answer": true,
       "Team": "Low Tech",
@@ -13872,28 +13717,7 @@
       "Topic": "Technologies"
      },
      {
-      "Question": "NoSQL databases are designed for handling low-velocity data streams. ",
-      "Answer": false,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
       "Question": "Analytical Big Data focuses on real-time operations. ",
-      "Answer": false,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
-      "Question": "Operational Big Data focuses on supporting real-time business operations. ",
-      "Answer": true,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
-      "Question": "Apache Hadoop is mainly used for real-time data streaming. ",
       "Answer": false,
       "Team": "Low Tech",
       "Module": "Big Data",
@@ -13914,13 +13738,6 @@
       "Topic": "Technologies"
      },
      {
-      "Question": "A Lakehouse architecture combines aspects of data lakes and data warehouses. ",
-      "Answer": true,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Technologies"
-     },
-     {
       "Question": "Data transformation involves converting raw data into a format that is easier to analyze. ",
       "Answer": true,
       "Team": "Low Tech",
@@ -13930,13 +13747,6 @@
      {
       "Question": "Apache Kafka is used for data storage. ",
       "Answer": false,
-      "Team": "Low Tech",
-      "Module": "Big Data",
-      "Topic": "Data Processing and Analytics"
-     },
-     {
-      "Question": "Cloud-based data preparation offers scalability and real-time collaboration. ",
-      "Answer": true,
       "Team": "Low Tech",
       "Module": "Big Data",
       "Topic": "Data Processing and Analytics"
@@ -14512,12 +14322,6 @@
       "Module": "Big Data"
      },
      {
-      "Question": "Descriptive analysis is used to summarize and interpret historical data, providing insights into what has happened based on past information. ",
-      "Answer": true,
-      "Team": "Neuronix",
-      "Module": "Big Data"
-     },
-     {
       "Question": "Descriptive analytics is an analysis technique used for forecasting the future outcomes. ",
       "Answer": false,
       "Team": "Neuronix",
@@ -14528,13 +14332,6 @@
       "Answer": false,
       "Team": "Neuronix",
       "Module": "Big Data"
-     },
-     {
-      "Question": "Deep learning is a subset of machine learning. ",
-      "Answer": true,
-      "Team": "Neuronix",
-      "Module": "Connectionist AI",
-      "Topic": "Introduction"
      },
      {
       "Question": "Neural networks consist only of a single hidden layer. ",
@@ -15332,12 +15129,6 @@
       "Module": "Hardware"
      },
      {
-      "Question": "Application-Specific Integrated Circuits (ASICs) are less efficient than traditional CPUs when it comes to running generalized AI algorithms across multiple applications. ",
-      "Answer": true,
-      "Team": "dwarf",
-      "Module": "Hardware"
-     },
-     {
       "Question": "The primary purpose of using GPUs in AI applications is to enhance graphical performance for video games rather than to accelerate machine learning tasks.",
       "Answer": false,
       "Team": "dwarf",
@@ -15345,12 +15136,6 @@
      },
      {
       "Question": "Application-Specific Integrated Circuits (ASICs) are less efficient than traditional CPUs when it comes to running generalized AI algorithms across multiple applications.",
-      "Answer": false,
-      "Team": "dwarf",
-      "Module": "Hardware"
-     },
-     {
-      "Question": "The primary purpose of using GPUs in AI applications is to enhance graphical performance for video games rather than to accelerate machine learning tasks.",
       "Answer": false,
       "Team": "dwarf",
       "Module": "Hardware"
@@ -15396,18 +15181,6 @@
       "Answer": false,
       "Team": "dwarf",
       "Module": "Behaviorist AI"
-     },
-     {
-      "Question": "Application-Specific Integrated Circuits (ASICs) are less efficient than traditional CPUs when it comes to running generalized AI algorithms across multiple applications. ",
-      "Answer": true,
-      "Team": "dwarf",
-      "Module": "Hardware"
-     },
-     {
-      "Question": "The primary purpose of using GPUs in AI applications is to enhance graphical performance for video games rather than to accelerate machine learning tasks.",
-      "Answer": false,
-      "Team": "dwarf",
-      "Module": "Hardware"
      },
      {
       "Question": "Heterogeneous architectures integrate different types of processors and specialized accelerators into a single system . ",
@@ -15465,24 +15238,6 @@
      },
      {
       "Question": "Development of robust ethical guidelines and regulations will shape how behavioral AI is implemented, ensuring privacy and fairness. ",
-      "Answer": true,
-      "Team": "dwarf",
-      "Module": "Behaviorist AI"
-     },
-     {
-      "Question": "Future smart home devices powered by Behavioral AI will primarily rely on cloud computing for all data processing, limiting their functionality during internet outages.",
-      "Answer": false,
-      "Team": "dwarf",
-      "Module": "Behaviorist AI"
-     },
-     {
-      "Question": "As AI technologies evolve, there is a growing concern that they could exacerbate existing social biases if not carefully monitored. ",
-      "Answer": true,
-      "Team": "dwarf",
-      "Module": "Behaviorist AI"
-     },
-     {
-      "Question": "Neuromorphic computing aims to replicate the structure and function of the human brain, which can enhance the efficiency of Behavioral AI applications. ",
       "Answer": true,
       "Team": "dwarf",
       "Module": "Behaviorist AI"
@@ -16978,12 +16733,6 @@
       "Module": "AI Overview"
      },
      {
-      "Question": "The Turing test evaluates whether a machine can exhibit intelligent behavior indistinguishable from that of a human.",
-      "Answer": true,
-      "Team": "BIT by bit",
-      "Module": "AI Overview"
-     },
-     {
       "Question": "AI systems can solve problems by mimicking human thought processes.",
       "Answer": true,
       "Team": "BIT by bit",
@@ -16992,12 +16741,6 @@
      {
       "Question": "AI models can function without any human intervention after they are trained.",
       "Answer": false,
-      "Team": "BIT by bit",
-      "Module": "AI Overview"
-     },
-     {
-      "Question": "AI models can make decisions based purely on statistical patterns without understanding the context.",
-      "Answer": true,
       "Team": "BIT by bit",
       "Module": "AI Overview"
      },
@@ -17844,13 +17587,6 @@
      {
       "Question": "Compiled languages are generally faster than interpreted ones.",
       "Answer": true,
-      "Team": "Digital Dreamers",
-      "Module": "Software",
-      "Topic": "Programming Languages"
-     },
-     {
-      "Question": "Python is a low-level programming language.",
-      "Answer": false,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Programming Languages"
@@ -18796,13 +18532,6 @@
       "Topic": "Programming Languages"
      },
      {
-      "Question": "Prolog is used in logic programming.",
-      "Answer": true,
-      "Team": "Cache Me If You Can",
-      "Module": "Software",
-      "Topic": "Programming Languages"
-     },
-     {
       "Question": "Assembly language uses mnemonics.",
       "Answer": true,
       "Team": "Cache Me If You Can",
@@ -19204,13 +18933,6 @@
      {
       "Question": "Neural networks are essential to symbolic AI.",
       "Answer": false,
-      "Team": "Cache Me If You Can",
-      "Module": "Symbolic AI",
-      "Topic": "Introduction"
-     },
-     {
-      "Question": "Symbolic AI is also called rule-based AI.",
-      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Symbolic AI",
       "Topic": "Introduction"
