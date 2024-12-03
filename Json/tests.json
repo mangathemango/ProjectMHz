@@ -18559,7 +18559,7 @@
      },
      {
       "Question": "System software is faster to execute than application software.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
