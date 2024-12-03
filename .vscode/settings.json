@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.ejs": "html",
-        "*.html": "html",
-        "*.js": "javascriptreact",
-        "*.jsx": "javascriptreact",
-        "temp.C": "cpp"
-    }
-}
