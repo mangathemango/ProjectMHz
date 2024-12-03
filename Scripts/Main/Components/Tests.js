@@ -208,6 +208,9 @@ const unrenderQuestion = (questionNumber) => {
 let viewedQuestionNumber = 0
 let questionAnswered = false
 let viewingPreviousQuestion = false
+let nextDelay = 1000
+let scrollDuration = 1000
+
 const moveToQuestion = (questionNumber) => {
     viewedQuestionNumber = questionNumber
     if (viewedQuestionNumber == 0) {
@@ -229,6 +232,7 @@ const moveToQuestion = (questionNumber) => {
         }
         renderQuestion(i)
     }
+    document.getElementById("test-viewer-container").style.transition = `all ease ${scrollDuration/1000}s`
     document.getElementById("test-viewer-container").style.transform = `translateX(-${questionNumber/30}%)`
     updateTestStats()
 }
@@ -249,7 +253,6 @@ const moveForward = () => {
     viewedQuestionNumber ++;
     moveToQuestion(viewedQuestionNumber)
 }
-
 
 const answerQuestion = (givenAnswer) => {
     if (questionAnswered || viewingPreviousQuestion) {
@@ -292,10 +295,10 @@ const answerQuestion = (givenAnswer) => {
     
     setTimeout(() => {
         nextQuestion()
-    }, 1000);
+    }, nextDelay);
     setTimeout(() => {
         questionAnswered = false
-    }, 2000);
+    }, nextDelay + scrollDuration);
 
 }
 
@@ -411,7 +414,7 @@ const saveIncorrectQuestions = () => {
         data += `(Correct Answer) ${question["Answer"]}\n`
     }
 
-    data += "__________________________________________________________\n"
+    data += "__________________________________________________________\n\n\n"
     })
     const blob = new Blob([data], { type: 'text/plain' });
     const fileURL = URL.createObjectURL(blob);
@@ -421,6 +424,11 @@ const saveIncorrectQuestions = () => {
     document.body.appendChild(downloadLink);
     downloadLink.click();
     URL.revokeObjectURL(fileURL);
+}
+
+const speedrunMode = () => {
+    scrollDuration = 0
+    nextDelay = 0
 }
 
 document.addEventListener("keydown", (event) => {
