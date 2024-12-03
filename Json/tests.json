@@ -18531,7 +18531,7 @@
      },
      {
       "Question": "Word processing software is a type of utility software.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
