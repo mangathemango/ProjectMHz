@@ -17460,7 +17460,7 @@
      },
      {
       "Question": "A shell operates to send inputs from the user to the process management and sends the output back to the user",
-      "Answer": false,
+      "Answer": true,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Operating System"
