@@ -402,6 +402,11 @@ const showIncorrectQuestions = () => {
 
 const saveIncorrectQuestions = () => {
     let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"]);
+    console.log(incorrectQuestions)
+    if (!incorrectQuestions[0]) {
+        downloadTextFile("No incorrect questions detected. Keep doing the test.\n\nAll of your incorrect questions will appear here when you make mistakes. Good luck :D")
+        return
+    }
     let data = "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n"
     incorrectQuestions.forEach(question => {
         data += "\n__________________________________________________________\n"
@@ -416,7 +421,11 @@ const saveIncorrectQuestions = () => {
 
     data += "__________________________________________________________\n\n\n"
     })
-    const blob = new Blob([data], { type: 'text/plain' });
+    downloadTextFile(data)
+}
+
+const downloadTextFile = (text) => {
+    const blob = new Blob([text], { type: 'text/plain' });
     const fileURL = URL.createObjectURL(blob);
     const downloadLink = document.createElement('a');
     downloadLink.href = fileURL;
@@ -425,7 +434,6 @@ const saveIncorrectQuestions = () => {
     downloadLink.click();
     URL.revokeObjectURL(fileURL);
 }
-
 const speedrunMode = () => {
     scrollDuration = 0
     nextDelay = 0
