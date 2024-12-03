@@ -18888,7 +18888,7 @@
      },
      {
       "Question": "Modularity in software helps organize code into independent units.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Software Engineering"
