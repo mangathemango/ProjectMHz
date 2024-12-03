@@ -5259,7 +5259,7 @@
       "Module": "Hardware"
      },
      {
-      "Question": "The high speed storage areas in the CPU, all data must be stored in a register before it can be processed.",
+      "Question": "The high speed storage areas in the CPU, all data must be stored in a __________ before it can be processed.",
       "A": "Registers ",
       "B": "Bus System",
       "C": "Memory",
@@ -5279,7 +5279,7 @@
       "Module": "Hardware"
      },
      {
-      "Question": "A type of register that holds data that is being transferred to or form memory",
+      "Question": "A type of register that holds data that is being transferred to or from memory",
       "A": "MAR",
       "B": "MDR ",
       "C": "AC",
@@ -6896,7 +6896,7 @@
       "B": "External Memory",
       "C": "Main Memory",
       "D": "CPU Cache",
-      "Answer": "B",
+      "Answer": "C",
       "Team": "Technova",
       "Module": "Hardware",
       "Topic": "Chapter 1"
@@ -6924,7 +6924,7 @@
       "Topic": "Chapter 1"
      },
      {
-      "Question": "What concept allows computers to interpret binary code into readable text? ",
+      "Question": "What concept doesn't allow computers to interpret binary code into readable text? ",
       "A": "Unicode",
       "B": "Assembly Language",
       "C": "ASCII",
@@ -15627,7 +15627,7 @@
      },
      {
       "Question": "5G provides faster speeds than 4G ",
-      "Answer": false,
+      "Answer": true,
       "Team": "Panda",
       "Module": "Network"
      },
@@ -19091,7 +19091,7 @@
      },
      {
       "Question": "SQL queries can only retrieve data.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Databases"
