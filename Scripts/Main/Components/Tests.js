@@ -321,6 +321,7 @@ const compileTestBank = () => {
     testBank = testData.filter(question => selectedPacks.includes(question["Module"]))
     testBank = testBank.map(question => {
         question["Answered"] = false;
+        question["Given Answer"] = null;
         return question
     })
     testBank = shuffle(testBank)
@@ -377,9 +378,52 @@ const retrytest = () => {
     document.getElementById("tests").style.transform = "translateY(0)"
 }
 
+const showIncorrectQuestions = () => {
+    let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"])
+    incorrectQuestions.forEach(question => {
+            console.log("")
+            console.log(`(${question["Team"]} - ${question["Module"]})`)
+            console.log(`(Question) ${question["Question"]}`)
+        if (question["Type"] === "multiple-choice") {
+            console.log(`(Correct Answer) ${question[question["Answer"]]}`)
+            console.log(`(Given Answer) ${question[question["Given Answer"]]}`)
+        } else {
+            console.log(`(Correct Answer) ${question["Answer"]}`)
+        }
+
+        console.log("")
+    })
+    console.log("")
+    console.log("NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.")
+}
+
+const saveIncorrectQuestions = () => {
+    let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"]);
+    let data = "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n"
+    incorrectQuestions.forEach(question => {
+        data += "\n"
+        data += `(${question["Team"]} - ${question["Module"]})\n`
+        data += `(Question) ${question["Question"]}\n`
+    if (question["Type"] === "multiple-choice") {
+        data += `(Correct Answer) ${question[question["Answer"]]}\n`
+        data += `(Given Answer) ${question[question["Given Answer"]]}\n`
+    } else {
+        data += `(Correct Answer) ${question["Answer"]}`
+    }
+
+    data += "\n"
+    })
+    const blob = new Blob([data], { type: 'text/plain' });
+    const fileURL = URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = fileURL;
+    downloadLink.download = 'Incorrect Questions.txt';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    URL.revokeObjectURL(fileURL);
+}
 
 document.addEventListener("keydown", (event) => {
-    console.log(event.key)
     if (event.key == "ArrowRight") {
         moveForward()
     }
