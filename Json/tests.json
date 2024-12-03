@@ -18706,7 +18706,7 @@
      },
      {
       "Question": "Security management is optional in an OS.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Operating System"
