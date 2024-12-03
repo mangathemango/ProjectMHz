@@ -16577,7 +16577,7 @@
      },
      {
       "Question": "Symbolic AI models use neural networks to generate predictions.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
@@ -16685,7 +16685,7 @@
      },
      {
       "Question": "Symbolic AI models are highly adaptable to new data without retraining.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
@@ -16751,7 +16751,7 @@
      },
      {
       "Question": "Symbolic AI models are highly suitable for image recognition tasks.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
