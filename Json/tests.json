@@ -18657,7 +18657,7 @@
      },
      {
       "Question": "Device drivers allow the OS to interface with peripherals.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Operating System"
