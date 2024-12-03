@@ -9247,7 +9247,7 @@
       "B": "Only one program can access the CPU at any time",
       "C": "The operating system occupies the entire memory space",
       "D": "Programs are loaded from disk into memory one at a time",
-      "Answer": "B",
+      "Answer": "A",
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Operating System"
