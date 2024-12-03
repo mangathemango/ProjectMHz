@@ -18440,7 +18440,7 @@
      },
      {
       "Question": "System software provides a platform for other software.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
