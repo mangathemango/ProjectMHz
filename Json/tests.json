@@ -16253,7 +16253,7 @@
      },
      {
       "Question": "The Internet is an example of a WAN",
-      "Answer": false,
+      "Answer": true,
       "Team": "Team MHZ",
       "Module": "Network",
       "Topic": "Network Devices"
