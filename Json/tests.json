@@ -18468,7 +18468,7 @@
      },
      {
       "Question": "Utility software manages device drivers.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
