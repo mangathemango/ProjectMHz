@@ -17383,7 +17383,7 @@
      },
      {
       "Question": "The operating system is the most core part of a software",
-      "Answer": false,
+      "Answer": true,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Operating System"
