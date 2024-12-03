@@ -18951,7 +18951,7 @@
      },
      {
       "Question": "The analysis phase is where the software code is written.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Software Engineering"
