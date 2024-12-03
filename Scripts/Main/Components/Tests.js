@@ -398,6 +398,7 @@ const saveIncorrectQuestions = () => {
         data += `(Given Answer) ${question[question["Given Answer"]]}\n`
     } else {
         data += `(Correct Answer) ${question["Answer"]}\n`
+        data += `(Given Answer) ${question["Given Answer"]}\n`
     }
 
     data += "__________________________________________________________\n\n\n"
