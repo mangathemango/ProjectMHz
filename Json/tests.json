@@ -17229,7 +17229,7 @@
      },
      {
       "Question": "Real-time operating systems (RTOS) are designed for multitasking.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Software",
       "Topic": "Operating Systems (OS)"
