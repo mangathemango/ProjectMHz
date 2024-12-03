@@ -2036,7 +2036,7 @@
       "Module": "Algorithms"
      },
      {
-      "Question": "The inorder traversal sequence of a binary tree is DGBAECHF, and the postorder traversal sequence is GDBEHFCWhat is the preorder traversal sequence?",
+      "Question": "The inorder traversal sequence of a binary tree is DGBAECHF, and the postorder traversal sequence is GDBEHFCA. What is the preorder traversal sequence?",
       "A": "ABCDFGHE",
       "B": "ABDGCEFH",
       "C": "ACBGDHEF",
@@ -18461,7 +18461,7 @@
      },
      {
       "Question": "Application software requires system software to function.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
