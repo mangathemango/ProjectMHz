@@ -401,17 +401,17 @@ const saveIncorrectQuestions = () => {
     let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"]);
     let data = "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n"
     incorrectQuestions.forEach(question => {
-        data += "\n"
+        data += "\n__________________________________________________________\n"
         data += `(${question["Team"]} - ${question["Module"]})\n`
-        data += `(Question) ${question["Question"]}\n`
+        data += `(Question) ${question["Question"]}\n\n`
     if (question["Type"] === "multiple-choice") {
         data += `(Correct Answer) ${question[question["Answer"]]}\n`
         data += `(Given Answer) ${question[question["Given Answer"]]}\n`
     } else {
-        data += `(Correct Answer) ${question["Answer"]}`
+        data += `(Correct Answer) ${question["Answer"]}\n`
     }
 
-    data += "\n"
+    data += "__________________________________________________________\n"
     })
     const blob = new Blob([data], { type: 'text/plain' });
     const fileURL = URL.createObjectURL(blob);
