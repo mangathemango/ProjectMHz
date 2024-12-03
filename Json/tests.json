@@ -17446,7 +17446,7 @@
      },
      {
       "Question": "Multiprogramming involves the cpu rapidly switching and executed programs in the memory and cpu cache",
-      "Answer": false,
+      "Answer": true,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Operating System"
