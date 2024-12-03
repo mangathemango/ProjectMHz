@@ -16661,7 +16661,7 @@
      },
      {
       "Question": "Symbolic AI is particularly useful for high-speed data-driven decisions.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
