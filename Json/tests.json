@@ -11027,7 +11027,7 @@
       "B": "System software",
       "C": "Application software",
       "D": "Operating system",
-      "Answer": "B",
+      "Answer": "C",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -11126,7 +11126,7 @@
       "B": "Spreadsheet software",
       "C": "Word processor",
       "D": "PowerPoint",
-      "Answer": "C",
+      "Answer": "D",
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -17446,7 +17446,7 @@
      },
      {
       "Question": "Multiprogramming involves the cpu rapidly switching and executed programs in the memory and cpu cache",
-      "Answer": false,
+      "Answer": true,
       "Team": "Digital Dreamers",
       "Module": "Software",
       "Topic": "Operating System"
@@ -18433,14 +18433,14 @@
      },
      {
       "Question": "Application software directly interacts with hardware.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
      },
      {
       "Question": "System software provides a platform for other software.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -18531,7 +18531,7 @@
      },
      {
       "Question": "Word processing software is a type of utility software.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "System and Application Software"
@@ -18657,7 +18657,7 @@
      },
      {
       "Question": "Device drivers allow the OS to interface with peripherals.",
-      "Answer": false,
+      "Answer": true,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Operating System"
@@ -18951,7 +18951,7 @@
      },
      {
       "Question": "The analysis phase is where the software code is written.",
-      "Answer": true,
+      "Answer": false,
       "Team": "Cache Me If You Can",
       "Module": "Software",
       "Topic": "Software Engineering"
