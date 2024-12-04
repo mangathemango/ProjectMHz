@@ -16518,7 +16518,7 @@
      },
      {
       "Question": "Knowledge representation in symbolic AI is dynamic and changes with every input.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
@@ -16831,7 +16831,7 @@
       "Topic": "Application Software"
      },
      {
-      "Question": "A spreadsheet application is used for text formatting.",
+      "Question": "A spreadsheet application is mainly used for text formatting.",
       "Answer": false,
       "Team": "BIT by bit",
       "Module": "Software",
