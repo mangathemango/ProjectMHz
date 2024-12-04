@@ -3955,7 +3955,7 @@
       "B": "Understand the user’s instructions.",
       "C": "Search for relevant information.",
       "D": "Store the browser history",
-      "Answer": "D",
+      "Answer": "A",
       "Team": "Stargazer",
       "Module": "Connectionist AI"
      },
@@ -5535,7 +5535,7 @@
       "B": "Application layer",
       "C": "Network access layer",
       "D": "Internet layer",
-      "Answer": "C",
+      "Answer": "A",
       "Team": "Panda",
       "Module": "Network"
      },
@@ -16091,7 +16091,7 @@
       "Topic": "Introduction to TCP\/IP"
      },
      {
-      "Question": "The OSI model has seven layers, while the TCP\/IP model has five.",
+      "Question": "The OSI model has seven layers, while the TCP\/IP model has four or five.",
       "Answer": true,
       "Team": "Team MHZ",
       "Module": "Network",
