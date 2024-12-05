@@ -387,7 +387,7 @@ const saveTestRecord = () => {
         alert("No test record found. Please complete some questions before downloading report")
         return
     }
-    let data = "TEST REPORT\n"
+    let data = "TEST REPORT\n\n"
     const time = new Date();
     data += `Recorded on ${time}\n`
     data += `Selected pack(s): ${selectedPacks.length == 9? "Everything": selectedPacks.toString()}\n`
