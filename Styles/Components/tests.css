@@ -550,3 +550,11 @@
     opacity: 0;
     pointer-events: none;
 }
+
+.times-seen-text {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.5;
+    user-select: none;
+    cursor: default;
+}

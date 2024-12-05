@@ -149,7 +149,8 @@ const renderQuestion = (questionNumber) => {
         `)
         return
     }
-
+    let answeredQuestionsCounter = JSON.parse(localStorage.getItem('MHZansweredQuestions')) || {};
+    let timesSeen = answeredQuestionsCounter[testBank[questionNumber]["id"]] || 0;
     let questionData = testBank[questionNumber]
     let answers = ""
     if (questionData["Type"] === "multiple-choice") {
@@ -186,7 +187,7 @@ const renderQuestion = (questionNumber) => {
         document.getElementById("test-viewer-container").insertAdjacentHTML("beforeend", `
             <div class="test-container" id="question-${questionNumber}">
               <div class="question-container">
-                <p class="question-text">${questionData["Question"]}</p>
+                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0? "New": `Seen ${timesSeen} time(s) before`})</span></p>
               </div>
               <div class="answers-container ${questionData["Type"]}">
                 ${answers}
@@ -196,7 +197,7 @@ const renderQuestion = (questionNumber) => {
     } else if (document.getElementById(`question-${questionNumber}`).innerHTML == "") {
         document.getElementById(`question-${questionNumber}`).innerHTML = `
             <div class="question-container">
-                <p class="question-text">${questionData["Question"]}</p>
+                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0? "New": `Seen ${timesSeen} time(s) before`})</span></p>
             </div>
             <div class="answers-container ${questionData["Type"]}">
                 ${answers}
@@ -278,9 +279,9 @@ const answerQuestion = (givenAnswer) => {
         correctStreak = 0
     }
 
-    let answeredQuestionsCounter = JSON.parse(localStorage.getItem('answeredQuestions')) || {};
+    let answeredQuestionsCounter = JSON.parse(localStorage.getItem('MHZansweredQuestions')) || {};
     answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] = (answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] || 0) + 1;
-    localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestionsCounter));
+    localStorage.setItem('MHZansweredQuestions', JSON.stringify(answeredQuestionsCounter));
 
     updateStreakBar()
 
