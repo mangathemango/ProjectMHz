@@ -16392,7 +16392,7 @@
      },
      {
       "Question": "Symbolic AI cannot be used for decision-making applications.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },

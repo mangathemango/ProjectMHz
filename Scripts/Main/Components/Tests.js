@@ -120,6 +120,7 @@ const startTest = () => {
     testBank = testBank.map(question => {
         question["Given Answer"] = null
         question["Answered"] = false
+        return question
     })
     document.getElementById("tests").style.transform = "translateY(-50%)"
     correctStreak = 0
