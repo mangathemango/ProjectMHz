@@ -117,6 +117,10 @@ const startTest = () => {
         return
     }
     testBank = shuffle(testBank)
+    testBank = testBank.map(question => {
+        question["Given Answer"] = null
+        question["Answered"] = false
+    })
     document.getElementById("tests").style.transform = "translateY(-50%)"
     correctStreak = 0
     currentQuestionNumber = 0
