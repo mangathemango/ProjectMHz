@@ -7498,8 +7498,8 @@
      },
      {
       "Question": "Which programming language is commonly used for symbolic AI? ",
-      "A": "Python ",
-      "B": "Prolog ",
+      "A": "Python",
+      "B": "Prolog",
       "C": "Java ",
       "D": "Swift",
       "Answer": "B",
