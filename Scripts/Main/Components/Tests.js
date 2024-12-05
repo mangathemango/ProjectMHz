@@ -88,7 +88,7 @@ document.getElementById("test-amount-text-input").addEventListener("input", () =
 })
 
 const updateTestTime = () => {
-    let timePerQuestion = 10;
+    let timePerQuestion = 30;
     let totalQuestions = document.getElementById("test-amount-text-input").value;
     let totalSeconds = timePerQuestion * totalQuestions
     let totalMinutes = Math.floor(totalSeconds / 60);
