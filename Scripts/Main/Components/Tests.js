@@ -381,14 +381,22 @@ const retrytest = () => {
     document.getElementById("tests").style.transform = "translateY(0)"
 }
 
-const saveIncorrectQuestions = () => {
-    let incorrectQuestions = testBank.filter(question => question["Answer"] != question["Given Answer"] && question["Answered"]);
-    console.log(incorrectQuestions)
-    if (!incorrectQuestions[0]) {
-        downloadTextFile("No incorrect questions detected. Keep doing the test.\n\nAll of your incorrect questions will appear here when you make mistakes. Good luck :D")
+const saveTestRecord = () => {
+    let testRecord = testBank.filter(question => question["Answered"])
+    if (!testRecord[0]) {
+        alert("No test record found. Please complete some questions before downloading report")
         return
     }
-    let data = "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n"
+    let data = "TEST REPORT\n"
+    const time = new Date();
+    data += `Recorded on ${time}\n`
+    data += `Selected pack(s): ${selectedPacks.length == 9? "Everything": selectedPacks.toString()}\n`
+    data += `Number of question answered: ${testRecord.length}\n`
+    data += `Right/Wrong questions: ${numCorrectAnswers}/${testRecord.length - numCorrectAnswers}\n`
+    data += `Accuracy: ${Math.floor(numCorrectAnswers*100 / testRecord.length)}%\n\n`
+    data += "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n\n"
+    data += "INCORRECT QUESTIONS\n"
+    let incorrectQuestions = testRecord.filter(question => question["Answer"] != question["Given Answer"]);
     incorrectQuestions.forEach(question => {
         data += "\n__________________________________________________________\n"
         data += `(${question["Team"]} - ${question["Module"]})\n`
@@ -400,7 +408,21 @@ const saveIncorrectQuestions = () => {
         data += `(Correct Answer) ${question["Answer"]}\n`
         data += `(Given Answer) ${question["Given Answer"]}\n`
     }
-
+    data += "(Your Notes)\n"
+    data += "__________________________________________________________\n\n\n"
+    })
+    data += "CORRECT QUESTIONS\n"
+    let correctQuestions = testRecord.filter(question => question["Answer"] === question["Given Answer"]);
+    correctQuestions.forEach(question => {
+        data += "\n__________________________________________________________\n"
+        data += `(${question["Team"]} - ${question["Module"]})\n`
+        data += `(Question) ${question["Question"]}\n\n`
+    if (question["Type"] === "multiple-choice") {
+        data += `(Correct Answer) ${question[question["Answer"]]}\n`
+    } else {
+        data += `(Correct Answer) ${question["Answer"]}\n`
+    }
+    data += "(Your Notes)\n"
     data += "__________________________________________________________\n\n\n"
     })
     downloadTextFile(data)
