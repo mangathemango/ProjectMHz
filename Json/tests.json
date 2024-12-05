@@ -13424,7 +13424,7 @@
      },
      {
       "Question": "Symbolic AI excels at understanding common sense knowledge. ",
-      "Answer": false,
+      "Answer": true,
       "Team": "Peaky Blinders",
       "Module": "Symbolic AI"
      },
