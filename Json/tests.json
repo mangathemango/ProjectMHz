@@ -1731,7 +1731,7 @@
       "B": "Left subtree first",
       "C": "Right subtree first",
       "D": "Root node last",
-      "Answer": "D",
+      "Answer": "B",
       "Team": "基因重组",
       "Module": "Algorithms"
      },
