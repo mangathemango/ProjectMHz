@@ -16442,7 +16442,7 @@
      },
      {
       "Question": "Symbolic AI is ideal for tasks that require intuitive, pattern-based learning.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
