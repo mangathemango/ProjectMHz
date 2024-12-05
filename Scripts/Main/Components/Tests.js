@@ -1,32 +1,30 @@
-let testData = {}
-let counter = {}
-fetch("Json/tests.json").then(response => response.json()).then((data) => {
-    testData = data;
-    let multipleChoiceBank = testData["Multiple Choice"]
-    multipleChoiceBank.map(element => {
-        element["Type"] = "multiple-choice" 
-        return element
-    })
-    let trueFalseBank = testData["True False"]
-    trueFalseBank.map(element => {
-        element["Type"] = "true-false"
-        return element
-    })
-    testData = multipleChoiceBank.concat(trueFalseBank)
-    numberOfQuestions = testData.length
-    testData.forEach(question => {
-        if (!counter[question["Module"]]) {
-            counter[question["Module"]] = 1
-        } else {
-            counter[question["Module"]] ++
-        }
-    })
-    appendTestPacks()
-})
+let testData = {};
+let counter = {};
+
+fetch("Json/tests.json")
+    .then(response => response.json())
+    .then(data => {
+        testData = data;
+        let multipleChoiceBank = testData["Multiple Choice"].map(element => ({
+            ...element,
+            Type: "multiple-choice"
+        }));
+        let trueFalseBank = testData["True False"].map(element => ({
+            ...element,
+            Type: "true-false"
+        }));
+        testData = multipleChoiceBank.concat(trueFalseBank);
+        numberOfQuestions = testData.length;
+        testData.forEach(question => {
+            counter[question["Module"]] = (counter[question["Module"]] || 0) + 1;
+        });
+        appendTestPacks()
+    });
+
 
 let testBank = []
 const appendTestPacks = () => {
-    let icon = {
+    const icon = {
         "Network":              '<i class="test-pack-icon fa-solid fa-wifi"></i>',
         "Hardware":             '<i class="test-pack-icon fa-solid fa-microchip"></i>',
         "Connectionist AI":     '<i class="test-pack-icon fa-solid fa-hexagon-nodes"></i>',
@@ -37,18 +35,20 @@ const appendTestPacks = () => {
         "Behaviorist AI":       '<i class="test-pack-icon fa-solid fa-robot"></i>',
         "Software":             '<i class="test-pack-icon fa-brands fa-app-store-ios"></i>'
     }
-    Object.keys(counter).sort((a,b) => counter[b] - counter[a]).forEach(module => {
-        let moduleID = module.replace(" ","-")
-        document.getElementById("test-packs-container").insertAdjacentHTML("beforeend",`
-            <div class="test-pack-container" id="${moduleID}-pack" onclick="togglePack('${module}')">
-                ${icon[module]}
-                <span class="test-pack-tooltip" id="${moduleID}-pack-tooltip">
-                    ${module} Pack<br>
-                    ${counter[module]} Questions
-                </span>
-            </div>
-        `)
-    })
+    Object.keys(counter)
+        .sort((a, b) => counter[b] - counter[a])
+        .forEach(module => {
+            const moduleID = module.replace(" ", "-");
+            document.getElementById("test-packs-container").insertAdjacentHTML("beforeend", `
+                <div class="test-pack-container" id="${moduleID}-pack" onclick="togglePack('${module}')">
+                    ${icon[module] || ''}
+                    <span class="test-pack-tooltip" id="${moduleID}-pack-tooltip">
+                        ${module} Pack<br>
+                        ${counter[module]} Questions
+                    </span>
+                </div>
+            `);
+        });
 }
 
 let selectedPacks = []
@@ -277,6 +277,11 @@ const answerQuestion = (givenAnswer) => {
     } else {
         correctStreak = 0
     }
+
+    let answeredQuestionsCounter = JSON.parse(localStorage.getItem('answeredQuestions')) || {};
+    answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] = (answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] || 0) + 1;
+    localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestionsCounter));
+
     document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
     document.getElementById("streak-number").textContent = correctStreak
     document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
@@ -393,15 +398,15 @@ const saveTestRecord = () => {
         return
     }
     let testRecord = testBank.filter(question => question["Answered"])
-    if (!testRecord[0]) {
+    if (testRecord.length === 0) {
         alert("No test record found. Please complete some questions before downloading report")
         return
     }
     let data = "TEST REPORT\n\n"
     const time = new Date();
     data += `Recorded on ${time}\n`
-    data += `Selected pack(s): ${selectedPacks.length == 9? "Everything": selectedPacks.toString()}\n`
-    data += `Number of question answered: ${testRecord.length}\n`
+    data += `Selected pack(s): ${selectedPacks.length === 9? "Everything": selectedPacks.toString()}\n`
+    data += `Number of questions answered: ${testRecord.length}\n`
     data += `Right/Wrong questions: ${numCorrectAnswers}/${testRecord.length - numCorrectAnswers}\n`
     data += `Accuracy: ${Math.floor(numCorrectAnswers*100 / testRecord.length)}%\n\n`
     data += "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n\n"
