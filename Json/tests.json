@@ -448,7 +448,7 @@
       "D": "It uses pre-trained weights to solve new tasks.",
       "Answer": "B",
       "Team": "Eagle's Ace",
-      "Module": "Connectionist AI"
+      "Module": "Behaviorist AI"
      },
      {
       "Question": "What does the term “epochs” refer to in training a neural network?",
@@ -3573,7 +3573,7 @@
       "Topic": "Introduction"
      },
      {
-      "Question": "Which layer in a neural network does the main computation?",
+      "Question": "Which layer in a neural network does the main computation occur?",
       "A": "Output layer",
       "B": "Hidden layer",
       "C": "Input layer",
@@ -14186,7 +14186,7 @@
       "Topic": "Key Applications"
      },
      {
-      "Question": "Neural networks in AI can generalize to new data without retraining. ",
+      "Question": "Neural networks in AI can always generalize to new data without retraining. ",
       "Answer": false,
       "Team": "Low Tech",
       "Module": "Connectionist AI",
