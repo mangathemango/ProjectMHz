@@ -282,9 +282,8 @@ const answerQuestion = (givenAnswer) => {
     answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] = (answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] || 0) + 1;
     localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestionsCounter));
 
-    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
-    document.getElementById("streak-number").textContent = correctStreak
-    document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
+    updateStreakBar()
+
     if (testBank[currentQuestionNumber]["Type"] === "multiple-choice") {
         ["A","B","C","D"].forEach(answer => {
             if (answer === correctAnswer) {
@@ -310,6 +309,21 @@ const answerQuestion = (givenAnswer) => {
         questionAnswered = false
     }, nextDelay + scrollDuration);
 
+}
+
+const updateStreakBar = () => {
+    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
+    document.getElementById("streak-number").textContent = correctStreak
+    document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
+    document.getElementById("streak-number-effect").textContent = correctStreak
+    document.getElementById("streak-number-effect").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
+    if (correctStreak > 10) {
+        document.getElementById("streak-number-effect").classList.add("explosion")
+        setTimeout(() => {
+            document.getElementById("streak-number-effect").classList.remove("explosion")
+        }, 1000);
+    }   
+            
 }
 
 const nextQuestion = () => {

@@ -56,3 +56,17 @@ body {
     pointer-events: none;
 }
 
+@keyframes explosion {
+    0% {
+        opacity: 1;
+        font-size: 15px;
+    }
+    100% {
+        opacity: 0;
+        font-size: 100px;
+    }
+}
+
+.explosion {
+    animation: explosion 1s forwards ease;
+}
