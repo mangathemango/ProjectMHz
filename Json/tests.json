@@ -1328,7 +1328,7 @@
      {
       "Question": "The time complexity of the Sieve of Eratosthenes is:",
       "A": "O(n)",
-      "B": "O(n log n)",
+      "B": "O(log n)",
       "C": "O(n^2)",
       "D": "O(n log n)",
       "Answer": "D",
