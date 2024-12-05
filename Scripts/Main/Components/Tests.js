@@ -383,10 +383,15 @@ const continuetest = () => {
 }
 
 const retrytest = () => {
-    document.getElementById("tests").style.transform = "translateY(0)"
+    if (confirm("Are you sure you want to stop the test?\n(Fun fact: you can right click, select Inspect element, and then type 'continuetest()' in the console tab to continue the current session)")) {
+        document.getElementById("tests").style.transform = "translateY(0)"
+    }
 }
 
 const saveTestRecord = () => {
+    if (!confirm("Save test record? You will receive a .txt file containing all the questions you answered in this session\n(Pro tip: use the (your notes) section to note down where you got wrong)")) {
+        return
+    }
     let testRecord = testBank.filter(question => question["Answered"])
     if (!testRecord[0]) {
         alert("No test record found. Please complete some questions before downloading report")
