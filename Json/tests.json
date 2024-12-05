@@ -6530,28 +6530,6 @@
       "Topic": "Introduction to TCP\/IP"
      },
      {
-      "Question": "Which tool is used to capture and analyze data packets in this lesson?",
-      "A": "Netstat  ",
-      "B": "Ping",
-      "C": "Wireshark",
-      "D": "Tcpdump  ",
-      "Answer": "C",
-      "Team": "Team MHZ",
-      "Module": "Network",
-      "Topic": "Introduction to TCP\/IP"
-     },
-     {
-      "Question": "What does Wireshark allow you to view in a captured data packet?",
-      "A": "Only the payload  ",
-      "B": "The headers and their details  ",
-      "C": "The routing paths  ",
-      "D": "The physical devices involved in the transmission  ",
-      "Answer": "B",
-      "Team": "Team MHZ",
-      "Module": "Network",
-      "Topic": "Introduction to TCP\/IP"
-     },
-     {
       "Question": "What does the TCP in TCP\/IP stand for?",
       "A": "Transmission Control Protocol",
       "B": "Transfer Communication Protocol",
@@ -16140,7 +16118,7 @@
       "Topic": "Data Flow"
      },
      {
-      "Question": "RP is used to resolve domain names into IP addresses",
+      "Question": "ARP is used to resolve domain names into IP addresses",
       "Answer": false,
       "Team": "Team MHZ",
       "Module": "Network",
@@ -16482,7 +16460,7 @@
      },
      {
       "Question": "Symbolic AI systems are data-intensive and require large datasets for training.",
-      "Answer": true,
+      "Answer": false,
       "Team": "BIT by bit",
       "Module": "Symbolic AI"
      },
