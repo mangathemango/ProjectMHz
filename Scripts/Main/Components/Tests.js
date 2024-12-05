@@ -433,7 +433,7 @@ const downloadTextFile = (text) => {
     const fileURL = URL.createObjectURL(blob);
     const downloadLink = document.createElement('a');
     downloadLink.href = fileURL;
-    downloadLink.download = 'Incorrect Questions.txt';
+    downloadLink.download = 'Test Report.txt';
     document.body.appendChild(downloadLink);
     downloadLink.click();
     URL.revokeObjectURL(fileURL);
