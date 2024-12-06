@@ -502,7 +502,11 @@ document.addEventListener("keydown", (event) => {
 })
 
 let shakeStrength = 5;
+let enableStreakShake = true;
 setInterval(() => {
+    if (!enableStreakShake) {
+        return
+    }
     if (correctStreak > 10) {
         let shiftAmmountX = Math.random()*shakeStrength - shakeStrength / 2
         let shiftAmmountY = Math.random()*shakeStrength - shakeStrength / 2
