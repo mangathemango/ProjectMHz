@@ -1,39 +1,22 @@
 let testData = {};
 let counter = {};
 
-fetch("Json/tests.json")
-    .then(response => response.json())
-    .then(data => {
-        testData = data;
-        let multipleChoiceBank = testData["Multiple Choice"].map(element => ({
-            ...element,
-            Type: "multiple-choice"
-        }));
-        let trueFalseBank = testData["True False"].map(element => ({
-            ...element,
-            Type: "true-false"
-        }));
-        testData = multipleChoiceBank.concat(trueFalseBank);
-        numberOfQuestions = testData.length;
-        testData.forEach(question => {
-            counter[question["Module"]] = (counter[question["Module"]] || 0) + 1;
-        });
-        appendTestPacks()
-    });
+
+
 
 
 let testBank = []
 const appendTestPacks = () => {
     const icon = {
-        "Network":              '<i class="test-pack-icon fa-solid fa-wifi"></i>',
-        "Hardware":             '<i class="test-pack-icon fa-solid fa-microchip"></i>',
-        "Connectionist AI":     '<i class="test-pack-icon fa-solid fa-hexagon-nodes"></i>',
-        "Symbolic AI":          '<i class="test-pack-icon fa-solid fa-icons"></i>',
-        "AI Overview":          '<i class="test-pack-icon fa-solid fa-brain"></i>',
-        "Algorithms":           '<i class="test-pack-icon fa-solid fa-laptop-code"></i>',
-        "Big Data":             '<i class="test-pack-icon fa-solid fa-database"></i>',
-        "Behaviorist AI":       '<i class="test-pack-icon fa-solid fa-robot"></i>',
-        "Software":             '<i class="test-pack-icon fa-brands fa-app-store-ios"></i>'
+        "Network": '<i class="test-pack-icon fa-solid fa-wifi"></i>',
+        "Hardware": '<i class="test-pack-icon fa-solid fa-microchip"></i>',
+        "Connectionist AI": '<i class="test-pack-icon fa-solid fa-hexagon-nodes"></i>',
+        "Symbolic AI": '<i class="test-pack-icon fa-solid fa-icons"></i>',
+        "AI Overview": '<i class="test-pack-icon fa-solid fa-brain"></i>',
+        "Algorithms": '<i class="test-pack-icon fa-solid fa-laptop-code"></i>',
+        "Big Data": '<i class="test-pack-icon fa-solid fa-database"></i>',
+        "Behaviorist AI": '<i class="test-pack-icon fa-solid fa-robot"></i>',
+        "Software": '<i class="test-pack-icon fa-brands fa-app-store-ios"></i>'
     }
     Object.keys(counter)
         .sort((a, b) => counter[b] - counter[a])
@@ -54,7 +37,7 @@ const appendTestPacks = () => {
 let selectedPacks = []
 
 const togglePack = (pack) => {
-    let packID = pack.replace(" ","-") + "-pack"
+    let packID = pack.replace(" ", "-") + "-pack"
     if (selectedPacks.includes(pack)) {
         document.getElementById(packID).classList.remove("selected-test-pack")
         selectedPacks = selectedPacks.filter(selectedPack => selectedPack != pack)
@@ -108,10 +91,14 @@ const updateTestTime = () => {
     document.getElementById("test-time").innerHTML = timeText
 }
 
-let correctStreak = 0
-const startTest = () => {
+const handleStartClicked = () => {
     let totalQuestions = document.getElementById("test-amount-text-input").value;
     testBank = testBank.filter(element => testBank.indexOf(element) < totalQuestions)
+    startTest()
+}
+
+let correctStreak = 0
+const startTest = () => {
     if (!testBank[0]) {
         alert("Select at least 1 subject")
         return
@@ -126,7 +113,7 @@ const startTest = () => {
     correctStreak = 0
     currentQuestionNumber = 0
     numCorrectAnswers = 0
-    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
+    document.getElementById("test-streak-viewer").style.setProperty("--streak", correctStreak)
     document.getElementById("streak-number").textContent = correctStreak
     document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
     document.getElementById("test-viewer-container").innerHTML = ""
@@ -134,6 +121,8 @@ const startTest = () => {
     updateTestStats()
     renderQuestion(0)
 }
+
+
 
 const renderQuestion = (questionNumber) => {
     if (questionNumber > testBank.length) {
@@ -154,8 +143,8 @@ const renderQuestion = (questionNumber) => {
     let questionData = testBank[questionNumber]
     let answers = ""
     if (questionData["Type"] === "multiple-choice") {
-        ["A","B","C","D"].forEach(letter => {
-            if (!questionData[letter]) {return}
+        ["A", "B", "C", "D"].forEach(letter => {
+            if (!questionData[letter]) { return }
             let answerJudgement = ""
             if (questionData["Answered"]) {
                 if (letter == questionData["Answer"]) {
@@ -167,10 +156,10 @@ const renderQuestion = (questionNumber) => {
             }
             answers += `<button class="answer-${letter} ${answerJudgement} answer" onclick="answerQuestion('${letter}')">${questionData[letter]}</button>`
         })
-        
+
 
     } else if (questionData["Type"] === "true-false") {
-        [true,false].forEach(boolean => {
+        [true, false].forEach(boolean => {
             let answerJudgement = ""
             if (questionData["Answered"]) {
                 if (boolean === questionData["Answer"]) {
@@ -180,14 +169,14 @@ const renderQuestion = (questionNumber) => {
                     answerJudgement = "wrong-answer"
                 }
             }
-            answers += `<button class="answer-${boolean} ${answerJudgement} answer" onclick="answerQuestion(${boolean})">${boolean? "True" : "False"}</button>`
+            answers += `<button class="answer-${boolean} ${answerJudgement} answer" onclick="answerQuestion(${boolean})">${boolean ? "True" : "False"}</button>`
         })
     }
     if (!document.getElementById(`question-${questionNumber}`)) {
         document.getElementById("test-viewer-container").insertAdjacentHTML("beforeend", `
             <div class="test-container" id="question-${questionNumber}">
               <div class="question-container">
-                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0? "New": `Seen ${timesSeen} time(s) before`})</span></p>
+                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0 ? "New" : `Seen ${timesSeen} time(s) before`})</span></p>
               </div>
               <div class="answers-container ${questionData["Type"]}">
                 ${answers}
@@ -197,7 +186,7 @@ const renderQuestion = (questionNumber) => {
     } else if (document.getElementById(`question-${questionNumber}`).innerHTML == "") {
         document.getElementById(`question-${questionNumber}`).innerHTML = `
             <div class="question-container">
-                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0? "New": `Seen ${timesSeen} time(s) before`})</span></p>
+                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0 ? "New" : `Seen ${timesSeen} time(s) before`})</span></p>
             </div>
             <div class="answers-container ${questionData["Type"]}">
                 ${answers}
@@ -230,7 +219,7 @@ const moveToQuestion = (questionNumber) => {
     } else {
         document.getElementById("test-nav-forward").style.scale = "1"
         viewingPreviousQuestion = true
-    } 
+    }
     for (i = 0; i <= questionNumber + 20; i++) {
         if (i <= questionNumber - 20) {
             unrenderQuestion(i)
@@ -238,16 +227,16 @@ const moveToQuestion = (questionNumber) => {
         }
         renderQuestion(i)
     }
-    document.getElementById("test-viewer-container").style.transition = `all ease ${scrollDuration/1000}s`
-    document.getElementById("test-viewer-container").style.transform = `translateX(-${questionNumber/30}%)`
+    document.getElementById("test-viewer-container").style.transition = `all ease ${scrollDuration / 1000}s`
+    document.getElementById("test-viewer-container").style.transform = `translateX(-${questionNumber / 30}%)`
     updateTestStats()
 }
 
 const moveBack = () => {
     if (viewedQuestionNumber == 0) {
         return;
-    } 
-    viewedQuestionNumber --;
+    }
+    viewedQuestionNumber--;
     moveToQuestion(viewedQuestionNumber)
 
 }
@@ -255,8 +244,8 @@ const moveBack = () => {
 const moveForward = () => {
     if (viewedQuestionNumber == currentQuestionNumber) {
         return;
-    } 
-    viewedQuestionNumber ++;
+    }
+    viewedQuestionNumber++;
     moveToQuestion(viewedQuestionNumber)
 }
 
@@ -265,7 +254,7 @@ const answerQuestion = (givenAnswer) => {
         return
     }
     let correctAnswer = testBank[currentQuestionNumber]["Answer"]
-    if (typeof(givenAnswer) != typeof(correctAnswer)) {
+    if (typeof (givenAnswer) != typeof (correctAnswer)) {
         return
     }
 
@@ -273,8 +262,8 @@ const answerQuestion = (givenAnswer) => {
     testBank[currentQuestionNumber]["Answered"] = true
     questionAnswered = true
     if (givenAnswer == correctAnswer) {
-        numCorrectAnswers ++
-        correctStreak ++
+        numCorrectAnswers++
+        correctStreak++
     } else {
         correctStreak = 0
     }
@@ -286,7 +275,7 @@ const answerQuestion = (givenAnswer) => {
     updateStreakBar()
 
     if (testBank[currentQuestionNumber]["Type"] === "multiple-choice") {
-        ["A","B","C","D"].forEach(answer => {
+        ["A", "B", "C", "D"].forEach(answer => {
             if (answer === correctAnswer) {
                 document.querySelector(`div#question-${currentQuestionNumber} .answer-${answer}`).classList.add("right-answer")
             } else if (answer === givenAnswer) {
@@ -301,8 +290,8 @@ const answerQuestion = (givenAnswer) => {
                 document.querySelector(`div#question-${currentQuestionNumber} .answer-${answer}`).classList.add("wrong-answer")
             }
         })
-    } 
-    
+    }
+
     setTimeout(() => {
         nextQuestion()
     }, nextDelay);
@@ -313,7 +302,7 @@ const answerQuestion = (givenAnswer) => {
 }
 
 const updateStreakBar = () => {
-    document.getElementById("test-streak-viewer").style.setProperty("--streak",correctStreak)
+    document.getElementById("test-streak-viewer").style.setProperty("--streak", correctStreak)
     document.getElementById("streak-number").textContent = correctStreak
     document.getElementById("streak-number").style.transform = `translateX(${100 * (correctStreak > 10 ? 9 : correctStreak - 1)}%)`
     document.getElementById("streak-number-effect").textContent = correctStreak
@@ -323,13 +312,13 @@ const updateStreakBar = () => {
         setTimeout(() => {
             document.getElementById("streak-number-effect").classList.remove("explosion")
         }, 1000);
-    }   
-            
+    }
+
 }
 
 const nextQuestion = () => {
     let lastQuestionNumber = currentQuestionNumber
-    currentQuestionNumber ++
+    currentQuestionNumber++
     updateTestStats()
     moveToQuestion(currentQuestionNumber)
     renderQuestion(currentQuestionNumber)
@@ -337,12 +326,12 @@ const nextQuestion = () => {
 
 
 
-const shuffle = (array) => { 
-    for (let i = array.length - 1; i > 0; i--) { 
-      const j = Math.floor(Math.random() * (i + 1)); 
-      [array[i], array[j]] = [array[j], array[i]]; 
-    } 
-    return array; 
+const shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 const compileTestBank = () => {
@@ -371,10 +360,10 @@ const compileTestBankByTeam = (team) => {
 const updateTestStats = () => {
     const currentQuestion = viewedQuestionNumber + 1
     const totalQuestions = testBank.length
-    const progress = Math.floor(currentQuestionNumber*100/totalQuestions) + "%"
+    const progress = Math.floor(currentQuestionNumber * 100 / totalQuestions) + "%"
     const rightAnswers = numCorrectAnswers
     const wrongAnswers = currentQuestionNumber - numCorrectAnswers
-    const accuracy = currentQuestionNumber === 0 ? "100%" : Math.floor(rightAnswers*100/currentQuestionNumber) + "%"
+    const accuracy = currentQuestionNumber === 0 ? "100%" : Math.floor(rightAnswers * 100 / currentQuestionNumber) + "%"
     let topic
     if (testBank[currentQuestionNumber]) {
         let questionData = testBank[viewedQuestionNumber]
@@ -382,13 +371,13 @@ const updateTestStats = () => {
         if (questionData["Topic"]) {
             topic += ` (${questionData["Topic"]})`
         }
-        
+
     } else {
         topic = "Done"
         document.getElementById("test-results").textContent = rightAnswers + "/" + totalQuestions
         document.getElementById("test-results-percentage").textContent = accuracy
     }
-    
+
     document.getElementById("stat-question-number").textContent = currentQuestion > totalQuestions ? totalQuestions : currentQuestion
     document.getElementById("stat-total-question").textContent = totalQuestions
     document.getElementById("stat-progress").textContent = progress
@@ -420,10 +409,10 @@ const saveTestRecord = () => {
     let data = "TEST REPORT\n\n"
     const time = new Date();
     data += `Recorded on ${time}\n`
-    data += `Selected pack(s): ${selectedPacks.length === 9? "Everything": selectedPacks.toString()}\n`
+    data += `Selected pack(s): ${selectedPacks.length === 9 ? "Everything" : selectedPacks.toString()}\n`
     data += `Number of questions answered: ${testRecord.length}\n`
     data += `Right/Wrong questions: ${numCorrectAnswers}/${testRecord.length - numCorrectAnswers}\n`
-    data += `Accuracy: ${Math.floor(numCorrectAnswers*100 / testRecord.length)}%\n\n`
+    data += `Accuracy: ${Math.floor(numCorrectAnswers * 100 / testRecord.length)}%\n\n`
     data += "NOTE: Not every question has an accurate answer - around 5% of these are wrong. We are still working on fact checking the database as we speak, but just to be sure, try to fact-check these questions yourself.\n\n"
     data += "INCORRECT QUESTIONS\n"
     let incorrectQuestions = testRecord.filter(question => question["Answer"] != question["Given Answer"]);
@@ -431,15 +420,15 @@ const saveTestRecord = () => {
         data += "\n__________________________________________________________\n"
         data += `(${question["Team"]} - ${question["Module"]})\n`
         data += `(Question) ${question["Question"]}\n\n`
-    if (question["Type"] === "multiple-choice") {
-        data += `(Correct Answer) ${question[question["Answer"]]}\n`
-        data += `(Given Answer) ${question[question["Given Answer"]]}\n`
-    } else {
-        data += `(Correct Answer) ${question["Answer"]}\n`
-        data += `(Given Answer) ${question["Given Answer"]}\n`
-    }
-    data += "(Your Notes)\n"
-    data += "__________________________________________________________\n\n\n"
+        if (question["Type"] === "multiple-choice") {
+            data += `(Correct Answer) ${question[question["Answer"]]}\n`
+            data += `(Given Answer) ${question[question["Given Answer"]]}\n`
+        } else {
+            data += `(Correct Answer) ${question["Answer"]}\n`
+            data += `(Given Answer) ${question["Given Answer"]}\n`
+        }
+        data += "(Your Notes)\n"
+        data += "__________________________________________________________\n\n\n"
     })
     data += "CORRECT QUESTIONS\n"
     let correctQuestions = testRecord.filter(question => question["Answer"] === question["Given Answer"]);
@@ -447,13 +436,13 @@ const saveTestRecord = () => {
         data += "\n__________________________________________________________\n"
         data += `(${question["Team"]} - ${question["Module"]})\n`
         data += `(Question) ${question["Question"]}\n\n`
-    if (question["Type"] === "multiple-choice") {
-        data += `(Correct Answer) ${question[question["Answer"]]}\n`
-    } else {
-        data += `(Correct Answer) ${question["Answer"]}\n`
-    }
-    data += "(Your Notes)\n"
-    data += "__________________________________________________________\n\n\n"
+        if (question["Type"] === "multiple-choice") {
+            data += `(Correct Answer) ${question[question["Answer"]]}\n`
+        } else {
+            data += `(Correct Answer) ${question["Answer"]}\n`
+        }
+        data += "(Your Notes)\n"
+        data += "__________________________________________________________\n\n\n"
     })
     downloadTextFile(data)
 }
@@ -503,15 +492,76 @@ document.addEventListener("keydown", (event) => {
 
 let shakeStrength = 5;
 let enableStreakShake = true;
-setInterval(() => {
-    if (!enableStreakShake) {
-        return
+
+const processTestJson = (data) => {
+    let processed = {};
+    let multipleChoiceBank = data["Multiple Choice"].map(element => ({
+        ...element,
+        Type: "multiple-choice"
+    }));
+    let trueFalseBank = data["True False"].map(element => ({
+        ...element,
+        Type: "true-false"
+    }));
+    processed = multipleChoiceBank.concat(trueFalseBank);
+    numberOfQuestions = processed.length;
+    processed.forEach(question => {
+        counter[question["Module"]] = (counter[question["Module"]] || 0) + 1;
+    });
+    return processed;
+}
+
+const handleImport = () => {
+    const input = document.getElementById("importFileInput");
+    input.click()
+}
+document.getElementById("importFileInput").addEventListener("change", () => {
+    const file = document.getElementById("importFileInput").files[0];
+    if (!file) {
+        return;
     }
-    if (correctStreak > 10) {
-        let shiftAmmountX = Math.random()*shakeStrength - shakeStrength / 2
-        let shiftAmmountY = Math.random()*shakeStrength - shakeStrength / 2
-        document.getElementById("test-streak-viewer").style.transform = `translateX(calc(-50% + ${shiftAmmountX}px)) translateY(${shiftAmmountY}px)`
-    } else {
-        document.getElementById("test-streak-viewer").style.transform = `translateX(-50%)`
+
+    const reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = event => {
+        try {
+            const importedData = JSON.parse(event.target.result);
+            console.log(importedData);
+            testBank = processTestJson(importedData);
+            testBank = testBank.map(question => {
+                question["Answered"] = false;
+                question["Given Answer"] = null;
+                return question
+            })
+            testBank = shuffle(testBank)
+            startTest();
+        } catch (error) {
+            alert("Failed to import JSON file. Please ensure the file is a valid JSON format.");
+        }
     }
-}, 1);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("Json/tests.json")
+        .then(response => response.json())
+        .then(data => {
+            testData = processTestJson(data);
+            appendTestPacks()
+        });
+
+
+    setInterval(() => {
+        if (!enableStreakShake) {
+            return
+        }
+        if (correctStreak > 10) {
+            let shiftAmmountX = Math.random() * shakeStrength - shakeStrength / 2
+            let shiftAmmountY = Math.random() * shakeStrength - shakeStrength / 2
+            document.getElementById("test-streak-viewer").style.transform = `translateX(calc(-50% + ${shiftAmmountX}px)) translateY(${shiftAmmountY}px)`
+        } else {
+            document.getElementById("test-streak-viewer").style.transform = `translateX(-50%)`
+        }
+    }, 1);
+
+
+})
