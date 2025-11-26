@@ -172,7 +172,7 @@ const renderQuestion = (questionNumber) => {
         document.getElementById("test-viewer-container").insertAdjacentHTML("beforeend", `
             <div class="test-container" id="question-${questionNumber}">
               <div class="question-container">
-                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">(${timesSeen === 0 ? "New" : `Seen ${timesSeen} time(s) before`})</span></p>
+                <p class="question-text">${questionData["Question"]} <span title="Recording starts 6/12/2024" class="times-seen-text">${imported? "" : timesSeen === 0 ? "(New)" : `(Seen ${timesSeen} time(s) before)`}</span></p>
               </div>
               <div class="answers-container ${questionData["Type"]}">
                 ${answers}
