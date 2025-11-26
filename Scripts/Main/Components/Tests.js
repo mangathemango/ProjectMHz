@@ -1,10 +1,5 @@
 let testData = {};
 let counter = {};
-
-
-
-
-
 let testBank = []
 const appendTestPacks = () => {
     const icon = {
@@ -98,6 +93,7 @@ const handleStartClicked = () => {
 }
 
 let correctStreak = 0
+let imported = false;
 const startTest = () => {
     if (!testBank[0]) {
         alert("Select at least 1 subject")
@@ -268,9 +264,11 @@ const answerQuestion = (givenAnswer) => {
         correctStreak = 0
     }
 
-    let answeredQuestionsCounter = JSON.parse(localStorage.getItem('MHZansweredQuestions')) || {};
-    answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] = (answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] || 0) + 1;
-    localStorage.setItem('MHZansweredQuestions', JSON.stringify(answeredQuestionsCounter));
+    if (!imported) {
+        let answeredQuestionsCounter = JSON.parse(localStorage.getItem('MHZansweredQuestions')) || {};
+        answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] = (answeredQuestionsCounter[testBank[currentQuestionNumber]["id"]] || 0) + 1;
+        localStorage.setItem('MHZansweredQuestions', JSON.stringify(answeredQuestionsCounter));
+    }
 
     updateStreakBar()
 
@@ -534,6 +532,7 @@ document.getElementById("importFileInput").addEventListener("change", () => {
                 return question
             })
             testBank = shuffle(testBank)
+            imported = true;
             startTest();
         } catch (error) {
             alert("Failed to import JSON file. Please ensure the file is a valid JSON format.");
